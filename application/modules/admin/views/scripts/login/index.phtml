@@ -1,0 +1,20 @@
+<div class="loginheader">
+<? if($this->errormessages !== NULL):?>
+		<div class="loginerror">
+			<?= $this->errormessages; ?>
+		</div>
+<? endif;?>
+</div>
+
+
+<div id="login">
+	<h2><?= $this->application_name; ?></h2>
+	<h2>Version <?= $this->application_version; ?></h2>
+    <? if ($this->invalid_credentials): ?>
+		<div class="reset">
+			Username of wachtwoord incorrect.
+		</div>
+	<? endif;?>
+	<?= $this->form ?>
+	
+</div>

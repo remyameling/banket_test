@@ -1,0 +1,237 @@
+@charset "utf-8";
+
+body{
+	margin			: 0;
+	padding			: 0;
+}
+
+.clear{
+	clear			: both;
+	line-height		: 0px;
+	height			: 0px;
+}
+
+.hidden{
+	display: none;
+}
+
+.board{
+	width			: 75%;
+	margin-left		: auto;
+	margin-right	: auto;
+}
+
+#top{
+	height			: 30px;
+}
+
+#top .headermenu{
+	float			: right;
+	margin-top		: 5px;
+}
+
+#main{
+	padding-bottom: 20px;
+	min-height: 700px;
+}
+
+#main p{
+	margin: 1em 0;
+}
+
+#main p:first-child{
+	margin-top: 0;
+}
+
+#main ul{
+	list-style: inside;
+}
+
+#main .more{
+	padding-right: 15px;
+	float: right;
+}
+
+#main #header{
+	height			: 20px;
+}
+
+#main #header #branding{
+	margin-top		: 24px;
+}
+
+#main #header #header_pic{
+	float			: right;
+	margin-top		: 35px;
+}
+
+#main #mainnav{
+	height			: 40px;
+}
+
+#main #mainnav  ul.navigation{
+	float				: left;
+	height				: 40px;
+	margin-left			: 20px;
+	border-left-width	: 1px;
+}
+
+#main #mainnav  #search{
+	float: right;
+}
+
+#main #content{
+	margin-top: 15px;
+}
+
+#main #content #mainbar{
+	
+	float: right;
+	width: 78%;
+	margin-left: 1%;
+	margin-right: 1%;	
+}
+
+#main #content #sidebar{
+	float: left;
+	width: 18%;
+	margin-left: 1%;
+	margin-right: 1%;	
+	
+}
+
+#main #content #middlebar{
+	float: left;
+	width: 48%;
+	margin-left: 1%;
+	margin-right: 1%;	
+	
+}
+
+#footer{
+	height		: 175px;
+	padding-top	: 5px;
+}
+
+#footermenucontainer{
+	float: left;
+}
+
+#footercopycontainer{
+	float: right;
+}
+
+.button{
+	padding					: 3px 20px;
+	text-decoration			: none;
+	-moz-border-radius		: 10px;
+	-webkit-border-radius	: 10px;
+	font-size				: 12px;
+
+}
+
+#netwerk_status .netwerk_icon{
+	width			: 29px;
+	margin-right	: 10px;
+	display			: block;
+	float			: left;
+	margin-bottom	: 5px;
+}
+
+#netwerk_status .content{
+	float: left;
+}
+
+#netwerk_status .content a{
+	display			: block;
+	float			: left;
+	height			: 24px;
+	padding-top		: 3px;
+	padding-bottom	: 2px;
+	margin-bottom	: 5px;
+}
+
+#statistieken{
+	margin-top: 20px;
+}
+
+.imgbtn{
+	float: right;
+}
+
+.wizardbuttons{
+	margin-top		: 20px;
+	width			: 100%;
+	margin-bottom	: 10px; 
+	height			: 22px;
+	clear			: both;
+	text-align: right;
+}
+
+.stat_concept,.stat_vervallen,.stat_nieuw,.stat_voldaan{
+	background-color		:#FF0000;
+	display					: block;
+	padding					: 0 15px;
+	text-align				: center;
+	-moz-border-radius		: 5px;
+	-webkit-border-radius	: 2px;	
+	border-radius 			: 2px;
+}
+
+#parent{
+	height: 910px;
+}
+
+#sidebar iframe{
+	height: 880px;
+	width: 100%;
+}
+
+#frmdatefilter{
+	float: left;
+	display: inline-block;
+	width: auto;
+}
+
+#frm_itemsperpage{
+	float: right;
+	display: inline-block;
+	width: auto;
+}
+
+.paginationControl{
+	float: left;
+	height: 2em;
+	lineheight: 2em;
+	margin-top: 1em;
+}
+
+.download{
+	float: right;
+	height: 2em;
+	lineheight: 2em;
+	margin-top: 1em;
+}
+
+hr{
+	clear: both;
+}
+
+.iconwrapper{
+	height					: 14px;
+	line-height				: 14px;
+	width					: 14px;
+	padding					: 1px;
+	border					: 1px solid #D3D3D3;
+	margin					: 0px;
+	margin-right			: 2px;
+	float					: left;
+	cursor					: pointer;
+	background-color		: #eee;
+	position				: relative;
+	top						: 2px;	
+	-moz-border-radius		: 2px;
+	-webkit-border-radius	: 2px;	
+	border-radius			: 2px;
+}
+

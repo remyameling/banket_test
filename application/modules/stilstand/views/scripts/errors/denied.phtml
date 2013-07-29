@@ -1,0 +1,18 @@
+<div class="box large">
+    <h1>Geen toegang</h1>
+    
+    <div class="content">
+        <? if ($this->GetRole() == "guest"): ?>
+            <h2>Je bent niet aangemeld</h2>
+    
+            <p>
+            <a href="/login/identify">Klik hier om aan te melden</a>
+            </p>
+        <? else: ?>
+            <p>
+                Je bent niet geauthoriseerd om deze pagina te bekijken<br />
+                <a href="/">Klik hier om terug te gaan</a>    	
+            </p>
+        <? endif; ?>
+    </div>
+</div>

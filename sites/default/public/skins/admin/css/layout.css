@@ -1,0 +1,180 @@
+#header{
+	height: 30px;
+	-moz-border-radius-topleft			: 10px;
+	-moz-border-radius-topright			: 10px;
+	-moz-border-radius-bottomleft		: 10px;
+	-moz-border-radius-bottomright		: 10px;
+}
+
+
+#content,#header{
+	width: 1118px;	/* 918 */
+	margin-left: auto;
+	margin-right: auto;
+	padding: 20px;
+}
+
+
+
+#content{
+	padding-top: 0px;
+}
+
+#content{
+	min-height: 680px;
+	-moz-border-radius-topleft			: 10px;
+	-moz-border-radius-topright			: 10px;
+	-moz-border-radius-bottomleft		: 10px;
+	-moz-border-radius-bottomright		: 10px;
+}
+
+#content_only{
+	padding	: 0;
+	margin	: 0;
+}
+
+#browser #content{
+	width: 60%;
+}
+
+#content_only #content{
+	width: 98%;
+	margin-left: 1%;
+	margin-right: 1%;
+	padding: 0;
+	min-height: 10px;
+	border: 0px solid #fff;
+	-moz-border-radius-topleft			: 0px;
+	-moz-border-radius-topright			: 0px;
+	-moz-border-radius-bottomleft		: 0px;
+	-moz-border-radius-bottomright		: 0px;
+}
+
+.clear{
+	clear: both;
+}
+
+/** index page **/
+
+
+
+#tablemenu{
+	padding-top: 20px;
+	float: right;
+}
+
+#bulk{
+	float: left;
+}
+
+.paginationControl,
+.countselector{
+	float: right;
+	margin-left: 1em;
+}
+
+#pagination{
+	position: relative;
+	top: -3em;
+}
+
+/** login page **/
+
+#login{
+	height				: 210px;
+	width				: 510px;
+	background-image	: url(../img/login-bg.png);
+	background-repeat	: no-repeat;
+}
+
+#login h2{
+	position: relative;
+	width	: 150px; 
+	top: 35px;
+	left: 20px;
+}
+
+.loginheader{
+	height: 190px;
+	margin-bottom: 10px;
+}
+
+.loginerror{
+	position: relative;
+	top: 145px;
+}
+
+#login,.loginerror{
+	margin-left			: auto;
+	margin-right		: auto;
+}
+
+table.rootVoices{
+	float: left;
+	height: 30px;
+}
+
+#header-navigation .name{
+	margin-top: 10px;
+	float: right;
+	height: 30px;
+}
+
+.reset{
+	margin-left: 160px;
+	float: left;
+}
+
+.reset a{
+	text-decorarion: underline;
+	color: #000;
+}
+
+.dashbord{
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}
+
+.dashbord_infobox{
+	width: 47%;
+	float: left;
+	margin-right: 20px;
+}
+
+#accordion{
+	margin-top: 10px;
+}
+
+/** tree window **/
+#treewindow,#response{ 
+	width		: 47%; 
+	float		: left;
+	min-height	: 500px;
+	margin-right: 10px;
+}
+#response iframe{
+	border: 0px solid #fff;
+}
+
+#response .adminform{ 
+	min-height	: 500px;		
+}
+
+
+#treewindow {
+	-moz-border-radius	:10px 10px 10px 10px;		
+	border				:1px solid #DBDBDB;
+	margin-top			:10px;
+	padding-top			:10px;
+}
+#treewindow .buttons{
+	float				: left;
+	margin				: 0 5px;
+}	
+#tree{
+	background-color	:#FFFFFF;
+}
+.alpha_paginator{
+	margin: 1em 0;
+}

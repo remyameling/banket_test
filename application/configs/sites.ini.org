@@ -1,0 +1,201 @@
+[production]
+
+;; produktie sites
+
+sites.1 = tilburg
+sites.2 = moordrecht
+sites.3 = nuth
+sites.4 = oud_gastel
+sites.5 = ouderkerk
+sites.6 = bunschoten
+
+1 = tilburg
+2 = moordrecht
+3 = nuth
+4 = oud_gastel
+5 = ouderkerk
+6 = bunschoten
+
+;; produktie lijnen per site
+
+lijn.tilburg.110 = Lijn 1 produktie
+lijn.tilburg.111 = Lijn 1 handinpak
+lijn.tilburg.120 = Lijn 2 produktie
+lijn.tilburg.121 = Lijn 2 trayinpak
+lijn.tilburg.130 = Lijn 3 trayinpak
+lijn.tilburg.131 = Lijn 3 trayinpak + vouwdoosje
+lijn.tilburg.132 = Lijn 3 2 stuks verpakt
+lijn.tilburg.150 = Lijn 5 CM6
+lijn.tilburg.151 = Lijn 5 Flowpack zak
+lijn.tilburg.160 = Lijn 6 Zoenen x 9
+lijn.tilburg.161 = Lijn 6 Zoenen x 12
+lijn.tilburg.180 = Lijn 8 2 stuks verpakt
+lijn.tilburg.181 = Lijn 8 Mini stroopkoekjes
+lijn.tilburg.182 = Lijn 8 Midi in tray
+lijn.tilburg.190 = Lijn 9 Stroopkoeken
+
+lijnkortenaam.tilburg.10 = L1 prod
+lijnkortenaam.tilburg.11 = L1 inpak
+lijnkortenaam.tilburg.20 = L2 prod
+lijnkortenaam.tilburg.21 = L2 inpak
+lijnkortenaam.tilburg.30 = L3 inpak
+lijnkortenaam.tilburg.31 = L3 inpak + vouw
+lijnkortenaam.tilburg.32 = L3 2 stuks
+lijnkortenaam.tilburg.50 = L5 CM6
+lijnkortenaam.tilburg.51 = L5 Flow
+lijnkortenaam.tilburg.60 = L6 Z x 9
+lijnkortenaam.tilburg.61 = L6 Z x 12
+lijnkortenaam.tilburg.80 = L8 2 stuks
+lijnkortenaam.tilburg.81 = L8 Mini
+lijnkortenaam.tilburg.82 = L8 Midi
+lijnkortenaam.tilburg.90 = L9 Stroop
+
+lijn.moordrecht.210 = Lijn 21 per stuk verpakt
+lijn.moordrecht.211 = Lijn 21 handinpak
+lijn.moordrecht.230 = Lijn 23 mini naakt tuimel
+lijn.moordrecht.240 = Lijn 24 Flowpack
+lijn.moordrecht.241 = Lijn 24 Handinpak
+lijn.moordrecht.250 = Lijn 25 mini naakt tuimel/qs
+lijn.moordrecht.251 = Lijn 25 mini verpakt tuimel/qs
+lijn.moordrecht.252 = Lijn 25 mini verpakt los
+lijn.moordrecht.253 = Lijn 25 groot verpakt MP
+lijn.moordrecht.254 = Lijn 25 groot verpakt los
+
+lijn.nuth.331.naam 		= Lijn 1
+lijn.nuth.331.afkorting = L1
+lijn.nuth.331.eniacid 	= 1
+lijn.nuth.332.naam		= Lijn 2
+lijn.nuth.332.afkorting = L2
+lijn.nuth.332.eniacid 	= 2
+lijn.nuth.333.naam		= Lijn 3
+lijn.nuth.333.afkorting = L3
+lijn.nuth.333.eniacid 	= 3
+lijn.nuth.334.naam		= Lijn 4
+lijn.nuth.334.afkorting = L4
+lijn.nuth.334.eniacid 	= 4
+lijn.nuth.335.naam		= Lijn 5
+lijn.nuth.335.afkorting = L5
+lijn.nuth.335.eniacid 	= 5
+lijn.nuth.336.naam		= Lijn 6
+lijn.nuth.336.afkorting = L6
+lijn.nuth.336.eniacid 	= 6
+lijn.nuth.337.naam		= Lijn 7
+lijn.nuth.337.afkorting = L7
+lijn.nuth.337.eniacid 	= 7
+
+
+lijn.oud_gastel.410 = Hotelcake
+lijn.oud_gastel.411 = Blok
+lijn.oud_gastel.412 = Luxe/Bakewell cake
+lijn.oud_gastel.413 = Gesneden cake
+
+lijn.ouderkerk.510 = Heeslijn Gevulde koeken per stuk verpakt
+lijn.ouderkerk.511 = Heeslijn Gevulde koeken in toefverpakking
+lijn.ouderkerk.520 = Otemlijn Koekjeslijn
+lijn.ouderkerk.530 = kleine cake per stuk verpakt
+lijn.ouderkerk.531 = kleine cake blister verpakt
+
+lijn.bunschoten.610 = Baklijn 1
+lijn.bunschoten.611 = Inpaklijn 1
+lijn.bunschoten.620 = Baklijn 2
+lijn.bunschoten.630 = Baklijn 4 BK
+lijn.bunschoten.640 = Baklijn 4 Cake
+lijn.bunschoten.641 = Inpaklijn 4A
+lijn.bunschoten.642 = Inpaklijn 4B
+lijn.bunschoten.650 = Inpaklijn 5
+lijn.bunschoten.660 = Inpaklijn 6
+lijn.bunschoten.670 = Inpaklijn 7
+
+
+;;
+;; diensten per site
+;;
+
+dienst.tilburg.naam.1 = Ochtend
+dienst.tilburg.naam.2 = Middag
+dienst.tilburg.naam.3 = Avond
+dienst.tilburg.start.1.uur = 6
+dienst.tilburg.start.1.minuten = 0
+dienst.tilburg.einde.1.uur = 14
+dienst.tilburg.einde.1.minuten = 0
+dienst.tilburg.start.2.uur = 14
+dienst.tilburg.start.2.minuten = 0
+dienst.tilburg.einde.2.uur = 22
+dienst.tilburg.einde.2.minuten = 0
+dienst.tilburg.start.3.uur = 22
+dienst.tilburg.start.3.minuten = 0
+dienst.tilburg.einde.3.uur = 30			;; 30-24 = 6 uur (de volgende dag)
+dienst.tilburg.einde.3.minuten = 0
+
+dienst.moordrecht.start.1.uur 		= -1
+dienst.moordrecht.start.1.minuten 	= 0
+dienst.moordrecht.einde.1.uur 		= 7
+dienst.moordrecht.einde.1.minuten 	= 0
+dienst.moordrecht.start.2.uur 		= 7
+dienst.moordrecht.start.2.minuten 	= 0
+dienst.moordrecht.einde.2.uur 		= 15
+dienst.moordrecht.einde.2.minuten 	= 0
+dienst.moordrecht.start.3.uur 		= 15
+dienst.moordrecht.start.3.minuten 	= 0
+dienst.moordrecht.einde.3.uur 		= 23
+dienst.moordrecht.einde.3.minuten 	= 0
+
+dienst.nuth.naam.1          = Ochtend
+dienst.nuth.naam.2			= Middag
+dienst.nuth.naam.3			= Avond
+dienst.nuth.start.1.uur 	= 7
+dienst.nuth.start.1.minuten = 0
+dienst.nuth.einde.1.uur 	= 14
+dienst.nuth.einde.1.minuten = 30
+dienst.nuth.start.2.uur 	= 14
+dienst.nuth.start.2.minuten = 30
+dienst.nuth.einde.2.uur 	= 22
+dienst.nuth.einde.2.minuten = 30
+dienst.nuth.start.3.uur 	= 22
+dienst.nuth.start.3.minuten = 30
+dienst.nuth.einde.3.uur 	= 31			;; 31-24 = 7 uur (de volgende dag)
+dienst.nuth.einde.3.minuten = 0
+
+
+dienst.oud_gastel.start.1.uur = 0
+dienst.oud_gastel.start.1.minuten = 0
+dienst.oud_gastel.einde.1.uur = 16
+dienst.oud_gastel.einde.1.minuten = 30
+dienst.oud_gastel.start.2.uur = 16
+dienst.oud_gastel.start.2.minuten = 30
+dienst.oud_gastel.einde.2.uur = 24
+dienst.oud_gastel.einde.2.minuten = 0
+
+dienst.ouderkerk.start.1.uur = 0
+dienst.ouderkerk.start.1.minuten = 0
+dienst.ouderkerk.einde.1.uur = 15
+dienst.ouderkerk.einde.1.minuten = 0
+dienst.ouderkerk.start.2.uur = 15
+dienst.ouderkerk.start.2.minuten = 0
+dienst.ouderkerk.einde.2.uur = 24
+dienst.ouderkerk.einde.2.minuten = 0
+
+dienst.bunschoten.start.1.uur = 0
+dienst.bunschoten.start.1.minuten = 0
+dienst.bunschoten.einde.1.uur = 15
+dienst.bunschoten.einde.1.minuten = 0
+dienst.bunschoten.start.2.uur = 15
+dienst.bunschoten.start.2.minuten = 0
+dienst.bunschoten.einde.2.uur = 24
+dienst.bunschoten.einde.2.minuten = 0
+
+;;
+;; indirecte functies per site
+;;
+
+functie.nuth.31 = Operators
+functie.nuth.32 = Aflossers
+functie.nuth.33 = Transport
+functie.nuth.34 = Overigen
+
+
+
+
+[testing : production]
+
+[development : testing]

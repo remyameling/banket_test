@@ -1,0 +1,44 @@
+<? echo $this->doctype() ?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- admin layout -->
+
+<head>  
+
+<? 
+	$this->HeadTitle('Social Toolbox')
+ 		 ->HeadTitle('Prototype')
+		 ->setSeparator(' | '); 		 
+		 
+	$this->HeadScript()->prependFile("/js/ba-debug.js")
+					   ->prependFile("/js/jquery-ui-1.8.9.custom/js/jquery-ui-1.8.9.custom.min.js")
+					   ->prependFile("/js/jquery-ui-1.8.9.custom/js/jquery-1.4.4.min.js");
+	
+	$this->HeadMeta()->appendHttpEquiv('Content-Type','text/html; charset=utf-8')
+					 ->appendName('author','Remy Ameling (www.remyameling.com)')
+					 ->appendName('copyright','Remy Ameling (www.remyameling.com)')
+					 ->appendName('content-language','nl')
+					 ->appendName('robots','all, follow')
+					 ->appendName('X-UA-Compatible','IE=8');
+					 
+	$this->HeadLink()->appendStylesheet("/js/jquery-ui-1.8.9.custom/css/pepper-grinder/jquery-ui-1.8.9.custom.css");		
+?>
+
+
+
+<?  	
+    echo $this->HeadScript();
+    echo $this->HeadMeta();
+	echo $this->loadSkin("admin");
+	echo $this->HeadLink();
+	echo $this->headTitle();	
+?>
+  
+</head> 
+
+<body>
+	<div id="content">
+		<?= $this->layout()->content ?>
+	</div>	
+</body>
+</html>

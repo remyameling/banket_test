@@ -1,0 +1,7 @@
+<?
+	if (isset($this->decoder[$this->fieldname])){
+		echo $this->decoder[$this->fieldname][$this->value];
+	}
+	else
+		echo $this->value; 
+?>

@@ -1,0 +1,15 @@
+<? 
+	$this->placeholder('content_title')->set("Overzicht stilstand per dag voor ".$this->date);
+	$this->placeholder('autorefresh')->set("60");
+?>
+
+<?= $this->form; ?> 
+<div class="break"></div>
+<br /><br />
+<hr />
+<?= $this->Action('category','index','stilstand',array('datum'=>$this->date)); ?>
+<hr />
+<?= $this->Action('dienst','index','stilstand',array('datum'=>$this->date)); ?>
+<hr />
+<?= $this->Action('details','index','stilstand',array('datum'=>$this->date)); ?>
+<hr />

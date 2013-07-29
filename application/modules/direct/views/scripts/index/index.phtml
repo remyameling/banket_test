@@ -1,0 +1,74 @@
+<script>
+	$(document).ready(function() {
+		var maxWidth = 0;
+		var width    = 0;
+		$("#orders dl dd").each(function() {
+			width = $(this).outerWidth( true );
+			if (width > maxWidth)
+				maxWidth = width;			
+		});
+		$("#orders dl").css('width', maxWidth+100);	
+
+	$(function() {
+	        $( document ).tooltip({position: {
+                my: "center bottom-20",
+                at: "center top",
+                using: function( position, feedback ) {
+                    $( this ).css( position );
+                    $( "<div>" )
+                        .addClass( "arrow" )
+                        .addClass( feedback.vertical )
+                        .addClass( feedback.horizontal )
+                        .appendTo( this );
+                }
+            }});
+	    })
+		
+	});	
+</script>
+
+
+<? 
+	$this->placeholder('content_title')->set("Overzicht openstaande orders voor ".$this->date);
+	$this->placeholder('autorefresh')->set("60");
+?>
+
+<p><?= $this->message; ?></p>
+
+<?= $this->form; ?> 
+<div class="break"></div>
+<br /><br />
+<hr />
+
+<div id="orders">	
+	<dl>
+	<? foreach($this->lijnen as $lijnnr=>$lijn): ?>
+		<dt><?= $lijn['naam']; ?></dt>
+		<dd>
+			<ul>
+			<? foreach($this->orders[$lijnnr] as $order): ?>
+				<li class="order" num_pallets="<?= $order['NUM_PALLETS'] ?>">
+					<? if(isset($this->register_urls[$order['PDORNR'].$order['PDORRL']])): ?>
+						<a class="<?= $this->classes[$order['PDORNR'].$order['PDORRL']] ?>" 
+						   href="<?= $this->register_urls[$order['PDORNR'].$order['PDORRL']] ?>"						   
+						   title="
+						   <?= $order['PDOMAL'] ?><br /><br />
+						   Artikelnr : <?= $order['PDALNR'] ?><br />						   
+						   Order/regel nr. : <?= $order['PDORNR'] ?>/<?= $order['PDORRL'] ?><br /><br />
+						   # Gepland : <?= $this->info[$order['PDORNR'].$order['PDORRL']]['planned'] ?><br />
+						   # Gereedgemeld : <?= $this->info[$order['PDORNR'].$order['PDORRL']]['gereedgemeld'] ?><br />
+						   # Afgemeld : <?= $this->info[$order['PDORNR'].$order['PDORRL']]['afgemeld'] ?><br />
+						   "><?= $order['PDORRL'] ?>: <?= substr($order['PDOMAL'],0,20); ?>...</a>
+					<? else: ?>
+						<span><?= $order['PDORRL'] ?>: <?= substr($order['PDOMAL'],0,20); ?>...</span>
+					<? endif; ?>
+				</li>
+			<? endforeach; ?>
+			</ul>
+		</dd>
+		<hr />
+	<? endforeach; ?>
+	</dl>	
+</div>
+
+<hr />

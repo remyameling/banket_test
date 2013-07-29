@@ -1,0 +1,14 @@
+<? 
+	$this->placeholder('content_title')->set("Dump file maken ");
+	$this->placeholder('autorefresh')->set("60");
+?>
+
+<?= $this->TableFilterform($this->tableHelper,"frm_period_and_state",NULL,false,"dump"); ?>
+
+<div class="clear"></div>
+
+<a class="download" href="<?= $this->url(array('format'=>'csv'),null,false); ?>">download .csv</a>
+
+<hr />
+
+<textarea style="padding:2%;height:500px;width:96%;font-family: 'Courier New', Courier, monospace;"><?= $this->TableCSV($this->tableHelper); ?></textarea>

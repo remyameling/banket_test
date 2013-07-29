@@ -1,0 +1,44 @@
+<? 
+	$this->HeadTitle("Banketgroep")->setSeparator(' | '); 		 
+		 
+	$this->HeadScript()->prependFile("/js/jqueryui/js/jquery-1.8.3.js")
+					    ->appendFile("/js/jqueryui/js/jquery-ui-1.9.2.custom.js")
+					    ->appendFile("/js/components/ckeditor/ckeditor.js")
+					    ->appendFile("/js/components/simplejqdropdown/js/jquery.dropdown.js")
+					    ->appendFile("/js/default/ckeconfig.js")
+					    ->appendFile("/js/default/init.js");
+	
+					   
+	$this->HeadLink()->appendStylesheet("/js/jqueryui/css/start/jquery-ui-1.9.2.custom.css")
+					 ->appendStylesheet("/js/components/simplejqdropdown/css/style.css");
+				     //
+	
+					   
+	$this->HeadMeta()->appendHttpEquiv('Content-Type','text/html; charset=utf-8')
+					 ->appendName('author','Remy Ameling (www.remyameling.com)')
+					 ->appendName('copyright','Remy Ameling (www.remyameling.com)')
+					 ->appendName('content-language','nl')
+					 ->appendName('robots','all, follow')
+					 ->appendName('X-UA-Compatible','IE=8');
+					 
+	$refresh = $this->placeholder('autorefresh');
+	if ($refresh != "")
+	{
+		$this->HeadMeta()->appendHttpEquiv('refresh',$this->placeholder('autorefresh').'; url="'.$this->url().'"');
+	} 
+					 
+					 
+    
+	
+?>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<?  
+	
+	echo $this->headTitle()."\n";
+	echo $this->headMeta()."\n";	
+    echo $this->HeadScript()."\n";
+	echo $this->loadSkin()."\n";
+	echo $this->HeadLink()."\n";	
+	
+?>	
+

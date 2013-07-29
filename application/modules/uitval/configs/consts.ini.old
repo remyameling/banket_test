@@ -1,0 +1,236 @@
+[production]
+
+;; settings voor uitval module
+;; ===================================================================================
+;; baktypes 
+;;
+;; baktype.<produktie sitenaam>.<id van bak per site uniek> = <naam>
+;; bakgewicht.<produktie sitenaam>.<<id van bak per site uniek> = <gewicht>
+;; bakgroep.<produktie sitenaam>.<categorie>.naam = "naam van de groep"
+;; bakgroep.<produktie sitenaam>.id[] = <id van bak in deze categorie>
+;;
+;; naam = naam van de bak, 
+;; gewicht = gewicht, vermenigvuldigd met 10 (1 decimaal toegestaan)
+;; ===================================================================================
+
+overzicht.default_order     = tijd
+
+bak.tilburg.0.naam			= "Gele plastic"
+bak.tilburg.0.gewicht    	= 310
+bak.tilburg.0.groep	    	= "Gele plastic"
+
+bak.tilburg.1.naam			= "Grijze bak 150 kg"
+bak.tilburg.1.gewicht    	= 1500
+bak.tilburg.1.groep	    	= "Grijze bak"
+
+bak.tilburg.2.naam			= "Grijze bak 155 kg"
+bak.tilburg.2.gewicht    	= 1550
+bak.tilburg.2.groep	    	= "Grijze bak"
+
+bak.tilburg.3.naam			= "Grijze bak 160 kg"
+bak.tilburg.3.gewicht    	= 1600
+bak.tilburg.3.groep	    	= "Grijze bak"
+
+bak.tilburg.4.naam			= "Grijze bak 165 kg"
+bak.tilburg.4.gewicht    	= 1650
+bak.tilburg.4.groep	    	= "Grijze bak"
+
+bak.tilburg.5.naam			= "Grijze bak 170 kg"
+bak.tilburg.5.gewicht    	= 1700
+bak.tilburg.5.groep	    	= "Grijze bak"
+
+bak.tilburg.6.naam			= "Grijze bak 175 kg"
+bak.tilburg.6.gewicht    	= 1750
+bak.tilburg.6.groep	    	= "Grijze bak"
+
+bak.tilburg.7.naam			= "Grijze bak 180 kg"
+bak.tilburg.7.gewicht    	= 1800
+bak.tilburg.7.groep	    	= "Grijze bak"
+
+
+
+;baktype.tilburg.0	 		= "Gele plastic"
+;bakgewicht.tilburg.0		= 310
+;baktype.tilburg.1			= "Grijze bak 150 kg"
+;bakgewicht.tilburg.1		= 1500
+;baktype.tilburg.2			= "Grijze bak 155 kg"
+;bakgewicht.tilburg.2		= 1550
+;baktype.tilburg.3			= "Grijze bak 160 kg"
+;bakgewicht.tilburg.3		= 1600
+;baktype.tilburg.4			= "Grijze bak 165 kg"
+;bakgewicht.tilburg.4		= 1650
+;baktype.tilburg.5			= "Grijze bak 170 kg"
+;bakgewicht.tilburg.5		= 1700
+;baktype.tilburg.6			= "Grijze bak 175 kg"
+;bakgewicht.tilburg.6		= 1750
+;baktype.tilburg.7			= "Grijze bak 180 kg"
+;bakgewicht.tilburg.7		= 1800
+
+
+
+baktype.moordrecht.0	 	= "grijze/gele plastic"
+bakgewicht.moordrecht.0		= 500
+baktype.moordrecht.1		= "Witte stalen bak"
+bakgewicht.moordrecht.1		= 2200
+baktype.moordrecht.2        = "grijze stapelbak"
+bakgewicht.moordrecht.2		= 22
+
+bak.nuth.0.naam				= "Rode bak"
+bak.nuth.0.gewicht    		= 330
+bak.nuth.0.groep	    	= "Rode bak"
+bak.nuth.1.naam				= "Grijze bak"
+bak.nuth.1.gewicht    		= 190
+bak.nuth.1.groep	    	= "Grijze bak"
+
+;baktype.nuth.0	 			= "Rode bak"
+;bakgewicht.nuth.0			= 330
+;baktype.nuth.1				= "Grijze bak"
+;bakgewicht.nuth.1			= 190
+;baktype.nuth.2				= "Netto gewicht (zonder bak)"
+;bakgewicht.nuth.2			= 0
+
+baktype.oud_gastel.0	 	= "Grijze bak"
+bakgewicht.oud_gastel.0		= 453
+baktype.oud_gastel.1		= "Groene bak"
+bakgewicht.oud_gastel.1		= 25
+
+baktype.ouderkerk.0	 		= "Rode bak"
+bakgewicht.ouderkerk.0		= 330
+baktype.ouderkerk.1			= "Groene bak"
+bakgewicht.ouderkerk.1		= 25
+
+baktype.bunschoten.0	 	= "Rode bak"
+bakgewicht.bunschoten.0		= 350
+baktype.bunschoten.1		= "Grijze bak"
+bakgewicht.bunschoten.1		= 450
+
+
+;; ===================================================================================
+;; categorieen per site 
+;; ===================================================================================
+cat.tilburg.100		= "Kruimels"
+cat.tilburg.200		= "Hele wafels"
+cat.tilburg.300		= "Gesmeerd voor de koelbaan"
+cat.tilburg.400		= "Gesmeerd na de koelbaan"
+
+cat.moordrecht.0	= "Onbekend"
+
+cat.nuth.1 		= "Wafelkwaliteit (kleur/gewicht)"
+cat.nuth.2 		= "Storing zolder / stapelaar / buffer / u"
+cat.nuth.3	 	= "Storing van de pakmachine / folie"
+cat.nuth.4 		= "Storing stickeren / metaaldetectie / casepacker"
+cat.nuth.5 		= "Omstel- of bedieningsfout"
+cat.nuth.6 		= "BIO"
+cat.nuth.7 		= "Veegresten / Ovens / Koelzolder"
+cat.nuth.0 		= "Opstarten van de oven"
+cat.nuth.15 	= "Uitval ovens door wegen / controle"
+cat.nuth.20		= "Afwijking gewicht wafels"
+cat.nuth.30		= "Afwijking kwaliteit wafels (kleur)"
+cat.nuth.50		= "Storing oven (oven uit)"
+cat.nuth.40		= "Storing koelzolder"
+cat.nuth.110	= "Storing stapelaar"
+cat.nuth.210	= "Storing bufferbaan"
+cat.nuth.310	= "Storing overzetter"
+cat.nuth.340	= "Storing messen"
+cat.nuth.350	= "Storing 'u' of invoer pakmachine"
+cat.nuth.410	= "Storing pakmachine"
+cat.nuth.460	= "Storing Domino"
+cat.nuth.520	= "Storing etiketeerder"
+cat.nuth.550	= "Storing metaaldetector"
+cat.nuth.620	= "Storing casepacker/robot"
+cat.nuth.710	= "Storing Dozensluiter/Bopack"
+cat.nuth.830	= "Storing palletizer"
+cat.nuth.430	= "Afstelling operator pakmachine"		
+cat.nuth.530	= "Afstelling operator etiketten"		
+cat.nuth.730	= "Afstelling operator dozensluiter/Bopack"
+cat.nuth.440	= "Kwaliteit folie"
+cat.nuth.540	= "Kwaliteit etiketten"
+cat.nuth.640	= "Kwaliteit dozen"
+cat.nuth.910	= "Personeel tekort"
+cat.nuth.920	= "Menselijke fout"
+cat.nuth.930	= "Overschakelen naar nieuw product"
+cat.nuth.950	= "Uitval poedersuiker"
+cat.nuth.998 	= "Veegresten / kruimels"
+cat.nuth.999 	= "Overig of onbekend"
+
+cat.oud_gastel.0		= "Onbekend"
+
+cat.ouderkerk.0			= "Onbekend"
+
+cat.bunschoten.0		= "Snijuitval herverwerking"
+cat.bunschoten.1		= "Snijuitval diervoeding"
+cat.bunschoten.2		= "Overig uitval diervoeding"
+cat.bunschoten.3		= "Uitval deegbereiding"
+cat.bunschoten.4		= "Afval voor vergisting"
+
+
+;; ===================================================================================
+;; categorie - lijn koppeling
+;; ===================================================================================
+
+;; Tilburg
+lijn.110			= 100,200,300,400
+lijn.111			= 100,200,300,400
+lijn.120			= 100,200,300,400
+lijn.121			= 100,200,300,400
+lijn.130			= 100,200,300,400
+lijn.131			= 100,200,300,400
+lijn.132			= 100,200,300,400
+lijn.150			= 100,200,300,400
+lijn.151			= 100,200,300,400
+lijn.160			= 100,200,300,400
+lijn.161			= 100,200,300,400
+lijn.180			= 100,200,300,400
+lijn.181			= 100,200,300,400
+lijn.182			= 100,200,300,400
+lijn.190			= 100,200,300,400
+
+;; Moordrecht
+lijn.210			= 0
+lijn.211			= 0
+lijn.230			= 0
+lijn.240			= 0
+lijn.241			= 0
+lijn.250			= 0
+lijn.251			= 0
+lijn.252			= 0
+lijn.253			= 0
+lijn.254			= 0
+
+;; Nuth
+lijn.310			= 0,15,20,30,50,40,110,210,310,340,350,410,460,520,550,620,710,830,430,530,730,440,540,640,910,920,930,998,999
+lijn.320			= 0,15,20,30,50,40,110,210,310,340,350,410,460,520,550,620,710,830,430,530,730,440,540,640,910,920,930,998,999
+lijn.330			= 0,15,20,30,50,40,110,210,310,340,350,410,460,520,550,620,710,830,430,530,730,440,540,640,910,920,930,998,999
+lijn.340			= 0,15,20,30,50,40,110,210,310,340,350,410,460,520,550,620,710,830,430,530,730,440,540,640,910,920,930,998,999
+lijn.350			= 0,15,20,30,50,40,110,210,310,340,350,410,460,520,550,620,710,830,430,530,730,440,540,640,910,920,930,998,999
+lijn.360			= 0,15,20,30,50,40,110,210,310,340,350,410,460,520,550,620,710,830,430,530,730,440,540,640,910,920,930,998,999
+lijn.370			= 0,15,20,30,50,40,110,210,310,340,350,410,460,520,550,620,710,830,430,530,730,440,540,640,910,920,930,950,998,999
+
+;; Oud Gastel
+lijn.410			= 0
+lijn.411			= 0
+lijn.412			= 0
+lijn.413			= 0
+
+;; Ouderkerk
+lijn.510			= 0
+lijn.511			= 0
+lijn.520			= 0
+lijn.530			= 0
+lijn.531			= 0
+
+;; Bunschoten
+lijn.610			= 0,1,2,3,4
+lijn.611			= 0,1,2,3,4
+lijn.620			= 0,1,2,3,4
+lijn.630			= 0,1,2,3,4
+lijn.640			= 0,1,2,3,4
+lijn.641			= 0,1,2,3,4
+lijn.642			= 0,1,2,3,4
+lijn.650			= 0,1,2,3,4
+lijn.660			= 0,1,2,3,4
+lijn.670			= 0,1,2,3,4
+
+[testing : production]
+
+[development : production]

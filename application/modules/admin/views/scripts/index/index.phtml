@@ -1,0 +1,29 @@
+<h1>Dashbord</h1>
+
+<div class="dashbord">
+
+<? foreach($this->NavIndexes() as $link): ?>
+	
+	<a class="dashbord_icon" href="<? echo $this->url(array('module'=>$link['module'],'controller'=>$link['controller'],'module'=>$link['module'])) ?>">
+		<span class="img" id="<?= $link['controller']?>"></span>
+		<span class="title"><?= $link['name']?></span>
+	</a>
+	
+<? endforeach; ?>
+
+</div>
+
+<? foreach($this->msg as $msg): ?>
+<?= $msg; ?>			
+<? endforeach; ?>
+<div class="clear"></div>
+
+
+<? if (count($this->widgets)>0 ): ?>
+	<? foreach($this->widgets as $widget): ?><a>
+		<div class="dashbord_infobox">	
+			<?= $this->Widget($widget); ?>
+		</div>	
+	<? endforeach; ?>
+<? endif; ?>
+<div class="clear"></div>

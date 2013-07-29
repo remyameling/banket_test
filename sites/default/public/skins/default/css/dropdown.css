@@ -1,0 +1,79 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* first level styling */
+
+ul.dropdown{
+	font-size						: 14px;
+	background-color				: #58595B;
+    -moz-border-radius-topleft		: 5px;
+	-moz-border-radius-bottomleft	: 5px;
+	-webkit-border-radius-topleft	: 5px;
+	-webkit-border-radius-bottom	: 5px;
+	border-radius-top-left			: 5px;
+	border-radius-bottom-left		: 5px;
+	float							: left;
+	width							: 630px;
+	padding							: 0 10px;
+}
+
+.dropdown li{
+	display				: block;
+	height				: 40px;
+	line-height			: 40px;
+}
+
+.dropdown > li{	
+	border-right-style	: dashed;
+    border-right-width	: 1px;
+	border-right-color	: #fff;
+	width				: auto;
+}
+
+.dropdown > li a{	
+	width				: auto;
+	padding-right		: 10px;
+}
+
+.dropdown ul li{
+	width				: 15em;
+}
+
+.dropdown ul li a{	
+	width				: 15em;
+	padding				: 0 10px;
+}
+
+.dropdown> li:first-child{
+	border-left-style	: dashed;
+    border-left-width	: 1px;
+	border-left-color	: #fff;
+}
+
+.dropdown li:hover{
+	background-color	: #999999;
+}
+
+.dropdown li a{
+	color				: #eee;
+	text-decoration		: none;	
+	padding-left		: 10px;
+}
+
+/* second and third level styling */
+
+.dropdown li ul{
+	background-color	: #58595B;
+}
+
+.dropdown li ul li{
+	border-top-style	: dashed;
+    border-top-width	: 1px;
+	border-top-color	: #fff;
+}
+
+.dropdown li ul li:first-child{
+	border: none;
+}
+
+

@@ -1,0 +1,18 @@
+<?= 
+	$this->placeholder('content_title')->set("Overzicht pallets in ENIAC"); 
+	$this->placeholder('content_title')->set("Rapportage pallets in ENIAC op ".$this->date);
+	$this->placeholder('autorefresh')->set("60");
+?>
+
+<?= $this->form; ?>
+
+<?= $this->TableNumItemsform($this->tableHelper,"frm_itemsperpage","Toon:","&nbsp;items per pagina"); ?>
+	        
+<div class="clear"></div>
+<?= $this->TablePagination($this->tableHelper,'pagination/pagination.phtml','Sliding'); ?>
+<hr />
+
+<table id="index" class="default fullwidth clickablerows">
+	<?= $this->TableHeader($this->tableHelper); ?>
+	<?= $this->TableBody($this->tableHelper); ?>
+</table>

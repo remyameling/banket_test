@@ -1,0 +1,17 @@
+<script>
+	$(document).ready(function(){ 
+		$("#lijnnr").attr("filter","categorie");
+		initFilters();		 
+	});
+</script>
+
+<? 
+	$this->HeadScript()->appendFile("/js/components/multilevel/filter.js");
+	
+	$this->placeholder('content_title')->set("Uitval registratie");
+	
+?>
+
+<p><?= $this->message; ?></p>
+
+<?= $this->form; ?>

@@ -1,0 +1,62 @@
+<tbody>
+	<? foreach ($this->paginator  as $entry): ?>
+	
+	<tr>
+    	<td class="checkbox"><input type="checkbox" class="checkall" name="ids[]" value="<?= $entry['id']; ?>" /></td>
+    	
+        
+        <? foreach($this->cols as $name=>$value): ?>
+			<td>
+			<? echo $this->partial('components/entryvalue.phtml',
+									array('value'=>$entry[$value],
+										  'fieldname'=>$value,
+										  'decoder'=>$this->decoder)); ?>
+			</td>
+		<? endforeach; ?>	
+    	
+    	
+    		<? if (count($this->associations) > 0): ?>
+			<td>
+				<? foreach($this->associations as $assoc): ?>
+					<? if ($this->Allowed('admin_'.$assoc['controller'],$assoc['action'])): ?>
+						<? if ((!isset($assoc['condition_field'])) || ($entry[$assoc['condition_field']] == $assoc['condition_value'])): ?>
+					
+							<? $params1 = array($assoc['id_param'] => $entry[$assoc['id_field']]);
+							   $params2 = $assoc['params'];
+							   $params3 = array('module'=>'admin','action'=>$assoc['action'],'controller'=>$assoc['controller']);
+							   $params  = array_merge($params1,$params2,$params3);					    
+						    ?>
+						    
+						    <? if ($entry[$assoc['id_field']] !== NULL): ?>							
+								<a href="<?= $this->url($params,NULL,true); ?>">
+									<img src="/img/admin/<?= $assoc['icon']; ?>" title="<?= $assoc['title'] ?>" alt="<?= $assoc['title'] ?>"/>  
+								</a>							
+							<? endif; ?>
+							
+						<? endif; ?>
+					<? endif; ?>
+				<? endforeach; ?>
+			</td>
+			<? endif;?>
+			<td>
+				<? foreach($this->rowactions as $action): ?>
+					<? if ($this->Allowed('admin_'.$this->controller,$action['privilege'])): ?>
+					
+						<? if ((isset($action['enabled_condition'])) && ($entry[$action['enabled_condition']['field']] != $action['enabled_condition']['value'])): ?>
+												
+						<? else: ?>
+							<a  <? if (isset($action['target'])): ?>target="<?= $action['target']; ?>"<? endif;?>
+								href="<?= $this->url( array('controller'=>$this->controller,
+														   'action'=>$action['action'],
+														   'module'=>'admin',
+														   'id'=>$entry['id']),'default')?>">
+								<img src="/img/admin/<?= $action['icon']; ?>" title=<?= $action['title']; ?> />
+							</a>
+						<? endif; ?>
+					<? endif; ?>
+				
+				<? endforeach; ?>
+			</td>
+		<? endforeach ?>		
+    </tr>   	    
+</tbody>

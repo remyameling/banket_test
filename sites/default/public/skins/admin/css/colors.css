@@ -1,0 +1,89 @@
+body{
+	background		: #edf0f4; /* grijs */
+	background		: #525252; /* grijs */
+}
+
+body#content_only{
+	background		: #fff;
+}
+
+h1{
+	background		: #fe7503; /* oranje */
+	color			: #FFFFFF;
+}
+
+h2{
+	color			: #bc0203;
+}
+
+table tr[href]:hover{
+	background-color: #fe7503; /* oranje */
+	color			: #fff;
+}
+
+#header{
+	background-color: #000;
+	color			: #fff;
+}
+
+.tabs li.active a,
+.tabs li.active a:hover{
+	background-color: #fff;
+	color			: #000;
+}
+
+#content{
+	background-color: #fff;
+	border			: 1px solid #c4c4c4;
+}
+
+.pag_active,
+.tabs li a:hover{
+	background-color: #fe7503; /* oranje */
+	color			: #fff;
+}
+
+table.index thead tr,
+.pag_first,
+.pag_prev,
+.pag_num,
+.pag_next,
+.pag_last,
+.disabled,
+.tabs li a{
+	background-color: #e4e4e4; /* grijs */
+	
+}
+
+table.index thead tr th{
+	color			: #222;
+}
+
+.pag_first,
+.pag_prev,
+.pag_num,
+.pag_next,
+.pag_last,
+.disabled,
+.reset a,
+a{
+	color	   		: #000;
+}
+
+
+.disabled{
+	color: #bbb;
+}
+
+#frmlogin input.login{
+	color:#666666;
+}
+
+#frmlogin input.submit{
+	background-color: #fe7503; /* oranje */
+	color: #fff;
+}
+
+#frmlogin ul.errors,.loginerror{
+	color							:#820101;
+}

@@ -1,0 +1,188 @@
+<? $this->HeadScript()->prependFile("/js/ba-debug.js"); ?>
+<? $this->HeadScript()->prependFile("/js/components/jsTree/_lib/jquery.cookie.js"); ?>
+<? $this->HeadScript()->prependFile("/js/components/jsTree/jquery.jstree.js"); ?>
+
+<h1>Overzicht <?= $this->items_objectname; ?> voor <?= $this->container_objectname; ?>: <?= $this->container_name; ?></h1>
+
+<form action="/admin/<?= $this->controller; ?>/index">
+	<label>Kies <?= $this->container_objectname; ?>:</label>
+	<select name="id" onchange="this.form.submit();">
+		<? foreach($this->container_entries as $entry): ?>
+			<option name="<?= $entry[$this->container_name_field]?>" value="<?= $entry['id']?>" <? if ($entry['id'] == $this->id) echo 'selected="selected"'; ?>><?= $entry[$this->container_name_field]?></option>
+		<? endforeach;?>
+	</select>
+</form>
+
+<div id="treewindow">
+	<input type="button" class="buttons" value="nieuw" id="create_1" />
+	<input type="button" class="buttons" value="hernoemen" id="rename_1" />
+	<input type="button" class="buttons" value="verwijderen" id="delete_1" />
+	<div class="clear">&nbsp;</div>
+	
+	<div id="<?= $this->tree_div_id; ?>">
+		<ul><li id="<?= $this->root_node_id; ?>" container_id="<?= $this->id; ?>"><a href="#"><?= $this->rootname; ?></a>
+			<ul>
+				<? foreach ($this->items as $item): ?>
+					<?= $this->partial('components/menu_item.phtml',array('item'=>$item,'labelfield'=>$this->labelfield)); ?>
+				<? endforeach; ?>
+			</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<div id="response">
+	<iframe id="responseframe" frameborder="0" src="" width="580px" height="500px" scrolling="auto"></iframe>
+</div>
+
+<script type="text/javascript" class="source">
+$(function () {
+	var url_refresh = "/admin/<?= $this->controller; ?>/index/id/<?= $this->id; ?>";
+	var url_create 	= "/admin/<?= $this->controller; ?>/createnode";
+	var url_delete 	= "/admin/<?= $this->controller; ?>/deletenode";
+	var url_rename 	= "/admin/<?= $this->controller; ?>/renamenode";
+	var url_focus  	= "/admin/<?= $this->controller; ?>/setfocus";
+	var url_move   	= "/admin/<?= $this->controller; ?>/movenode";
+	var url_edit   	= "/admin/<?= $this->controller; ?>/edit";
+
+
+	<? if ($this->init_open === NULL): ?>
+		var init_open   		= "#root";							/* open root node 	  */
+		var default_child       = $('li',$('#root')).attr('id');	/* select first child */
+	<? else: ?>
+		var init_open			= '#<?= $this->init_open; ?>';		/* open initial node   */
+		var default_child       = '<?= $this->init_open; ?>';		/* select initial node */
+	<? endif; ?>
+
+	/* select parent nodes of init_open */
+
+	init_nodes = [init_open];
+	$(init_open).parents("li").each(function(){ 
+		init_nodes.push("#"+$(this).attr('id')); 
+	});
+	
+
+	$("#create_1").click(function () { $("#tree").jstree("create"); });
+	$("#rename_1").click(function () { $("#tree").jstree("rename"); });
+	$("#delete_1").click(function () { $("#tree").jstree("remove"); });
+	
+	$("#tree").jstree({ 
+		"ui" 		: { "initially_select" 	: [ default_child ]},
+		"core" 		: { "initially_open" 	: init_nodes },
+		"plugins" 	: [ "themes",
+		        		"html_data",
+		        		"ui",
+		        		"crrm",
+		        		"dnd",
+		        		"contextmenu" ]
+	});
+
+	// events
+
+	$("#tree")
+	.bind("create.jstree", function (e, data) {
+
+		$.ajax({ url	: url_create, 
+				 type	: "POST",
+				 data	: {parent	:data.rslt.parent.attr("id"),
+			 		       label	:data.rslt.name,
+			 		       container:$("li#root").attr("container_id"),
+			 		       position	:data.rslt.position}, 
+				 		   context	:document.body,
+					 	   async: false,
+				 		   success	:function(html){
+
+								debug.debug("create onsucces:"+html);
+					 		   
+								data.rslt.obj.attr("id",html);
+								data.inst.select_node('li#'+html);
+								data.inst.set_focus('li#'+html);
+								window.location = url_refresh+"/init_open/"+html;
+					
+						   }
+					}
+		      );
+	})
+	.bind("remove.jstree", function (e, d) {
+		debug.debug("removenode.jstree");
+		d.rslt.obj.each(function (){
+			$.ajax({ url	: url_delete, 
+				 	 type	: "POST",
+				 	 data	: {id:this.id}, 
+				 	 context: document.body, 
+				 	 success: function(html)
+					 {
+					 		if (html == "")
+							{
+					 			$("#response iframe").attr("src","");
+								d.inst.refresh();
+								d.inst.select_node("#"+$('li',$('#root')).attr('id'));							
+							}
+							else
+							{
+								alert(html);
+					 			debug.debug("removenode.jstree: success");
+					 			$.jstree.rollback(d.rlbk);
+							}
+					}
+		   });
+		});
+	})
+	.bind("rename_node.jstree", function (e,d) {
+			$.ajax({ url	: url_rename, 
+				 	 type	: "POST",
+				 	 data	: {id:d.args[0].attr("id"),label:d.args[1]}, 
+				 	 context: document.body, 
+				 	 success: function(html){
+						$("#response").html(html);
+						d.inst.refresh();
+					 }
+			});
+	}).bind("select_node.jstree", function (e,d) {
+			
+			var node_id = d.rslt.obj.attr("id");
+			
+			if (d.rslt.obj.attr("id") != "root")
+			{
+				$.ajax({ url	: url_focus, 
+				 		 type	: "POST",
+				 		 data	: {id:d.rslt.obj.attr("id")}, 
+				 		 context: document.body, 
+				 		 success: function(html){	
+					 			
+								
+								$("#response iframe").attr("src",url_edit+"/id/"+node_id);
+	  					}
+				});
+			}
+			else
+				$("#response iframe").attr("src","");
+				
+	}).bind("move_node.jstree", function (e, data) {
+
+		data.rslt.o.each(function (i) {
+				$.ajax({	async 	: false,
+							type  	: 'POST',
+							url	  	: url_move,
+							data  	: {"id" 		: $(this).attr("id").replace("node_",""),
+									   "ref"		: data.rslt.np.attr("id").replace("node_",""), 
+									   "position" : data.rslt.cp + i},
+							success	: function (r) {
+								
+								$(data.rslt.oc).attr("id", "node_" + r.id);
+
+								if(data.rslt.cy && $(data.rslt.oc).children("UL").length) {
+									data.inst.refresh(data.inst._get_parent(data.rslt.oc));
+								}
+								data.inst.refresh();
+				}
+			});
+		});
+	});
+	
+
+	
+
+});
+</script>
+

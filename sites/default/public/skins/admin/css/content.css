@@ -1,0 +1,67 @@
+/* file controller edit */
+
+#content a img{
+	border: none;
+}
+
+.form_dd_col{
+	float: left;
+
+}
+
+.img_delete_link{
+	float: left;
+}
+
+.sample_pic{	
+	border		: 1px solid #DBDBDB;
+	display     : block;
+	margin-right: 1em;	
+}
+
+/* buttons */
+
+.abutton,.buttons{
+	background-color: #ff6d06; /* oranje */
+	color			: #fff;
+	padding			: 0.3em 0.5em;
+	text-decoration	: none;	
+	font-size		: 12px;
+	font-family		: Arial, Helvetica, sans-serif;
+	-moz-border-radius-topleft			: 10px;
+	-moz-border-radius-topright			: 10px;
+	-moz-border-radius-bottomleft		: 10px;
+	-moz-border-radius-bottomright		: 10px;
+	border-bottom-left-radius:10px;
+	border-bottom-right-radius:10px;
+	border-top-left-radius:10px;
+	border-top-right-radius:10px;
+	border: none;
+}
+
+.buttons{
+	border: none;
+}
+
+/* navigation controller */
+#navigation_controller #leftcol{
+	width		: 252px;
+	margin-right: 20px;
+	margin-top  : 20px;
+	overflow 	: hidden;
+	float: left;
+}
+
+#navigation_controller #rightcol{
+	width: 500px;
+	float: left;
+}
+
+#navigation_controller #rightcol table{
+	margin-top: 0;
+}
+
+.audit_trail,.mail_body{
+	padding: 1em;
+	border: 1px solid #000;
+}

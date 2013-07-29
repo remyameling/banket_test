@@ -1,0 +1,32 @@
+<h1>Dashbord</h1>
+
+<div class="dashbord">
+
+<? foreach($this->NavIndexes() as $link): ?>
+	
+	<a class="dashbord_icon" href="<? echo $this->url(array('module'=>$link['module'],'controller'=>$link['controller'],'module'=>$link['module'])) ?>">
+		<span class="img" id="<?= $link['controller']?>"></span>
+		<span class="title"><?= $link['name']?></span>
+	</a>
+	
+<? endforeach; ?>
+
+</div>
+
+
+
+<div class="clear"></div>
+
+<div>
+	<h2>Bijwerken zoekindex</h2>
+	
+	<a href="/admin">Ga terug</a>
+	
+	<br /><br />
+	<p><?= $this->msg; ?></p>
+	<br /><br />
+	
+	
+</div>
+
+<div class="clear"></div>

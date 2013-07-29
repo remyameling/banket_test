@@ -1,0 +1,18 @@
+<div class="name">Welkom <?= $this->UserInfo(); ?></div>
+
+<ul class="topnav">
+	<li><a href="<?php echo $this->url(array('module'=>'admin','controller'=>'index','action'=>'index'),'default',true) ?>">Dashbord</a></li>	
+  	<li>
+        <a href="#">Overzicht</a>
+        <ul class="subnav">
+			<? foreach($this->NavIndexes() as $link): ?>
+				<li><a href="<? echo $this->url(array('module'=>$link['module'],'controller'=>$link['controller'],'action'=>$link['action']),'default',true) ?>"><?= $link['name']?></a></li>
+			<? endforeach; ?>
+		</ul>
+    </li>
+    <li><a href="<?php echo $this->url(array('module'=>'default','controller'=>'index','action'=>'index'),'default',true) ?>">Naar Website</a></li>
+  	<li><a href="<?php echo $this->url(array('module'=>'admin','controller'=>'login','action'=>'logout'),'default',true) ?>">Uitloggen</a></li>  	
+</ul>
+
+
+

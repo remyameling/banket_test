@@ -1,0 +1,70 @@
+<script>
+	$(document).ready(function() {
+		var maxWidth = 0;
+		var width    = 0;
+		$("#orders dl dd").each(function() {
+			width = $(this).outerWidth( true );
+			if (width > maxWidth)
+				maxWidth = width;			
+		});
+		$("#orders dl").css('width', maxWidth+100);		
+	});	
+</script>
+
+<style>
+	#orders{ overflow:scroll; display: block; width: 100%; }
+	dl{ width: 500%;}
+	dt{ line-height: 3em; display:block; float: left; margin-right: 10px;}
+	dd{ line-height: 3em; float: left}
+	li.order{ margin: 1em 5px; line-height: 1em; display:block; float:left; font-size: 0.8em;background-color: #58595B;color: fff;}
+	li.order a {text-decoration:none}
+	li.order a.not {background-color: #009FDB;  }
+	li.order a.partly {background-color: #CC9900;  }
+	li.order span,li.order a {padding: 0.2em 1em;display:inline-block;color:#fff;}
+	hr{ clear:both; }
+</style>
+
+<? 
+	$this->placeholder('content_title')->set("Overzicht indirecte uren registraties voor ".$this->date);
+	$this->placeholder('autorefresh')->set("60");
+?>
+
+<p><?= $this->message; ?></p>
+
+<?= $this->form; ?> 
+<div class="break"></div>
+<br /><br />
+<hr />
+
+
+	
+<table class="default">
+	<thead>
+		<tr>
+			<th>&nbsp;</th>
+			<? foreach($this->diensten as $dienst_id=>$dienst): ?>
+				<th><?= $dienst ?></th>
+			<? endforeach; ?>
+		</tr>
+		<tr>
+			<th>&nbsp;</th>
+			<? foreach($this->diensten as $dienst_id=>$dienst): ?>
+				<th><a href="<?= $this->url(array('controller'=>'registratie','dienst'=>$dienst_id,'datum'=>$this->date),null,false); ?>">aanpassen</a></th>
+			<? endforeach; ?>
+		</tr>
+	</thead>
+	<tbody>
+		<? foreach($this->functies as $functie_id=>$functie): ?>
+			<tr>
+				<td><?= $functie ?></td>
+				<? foreach($this->diensten as $dienst_id=>$dienst): ?>
+					<td><?= $this->Aantalfte($this->data,$dienst_id,$functie_id); ?></dh>
+				<? endforeach; ?>
+			</tr>
+		<? endforeach; ?>	
+	</tbody>
+</table>
+
+	
+<hr />
+		

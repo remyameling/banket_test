@@ -1,0 +1,109 @@
+@charset "utf-8";
+/* CSS Document */
+
+.ui-layout-resizer-east-closed {
+    background-image: url("../img/go-lt-off.gif");
+	background-position: top left;
+	width: 15px;
+}
+
+#top,#footer,#largebtns{
+		
+	background-repeat: repeat-x;
+}
+
+#top,#largebtns{
+	background-position: bottom left;
+}
+
+#footer{
+	background-position: top left;
+}
+
+
+.headermenu li a{
+	background-image: url(../img/nav_sep_bg.jpg);
+	background-position: right;
+	background-repeat: no-repeat;
+}
+
+.headermenu li:last-child a{
+	background-image: none;
+}
+
+#main #mainnav{
+	/*
+	background-image: url(../img/mainnav_bg.jpg);
+	background-position: top left;
+	background-repeat: no-repeat;
+	*/
+	background-color: #58595B;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+#main .more,
+#quicknav ul li a,
+.boxnav li a
+{
+	background-image: url(../img/href_bg.png);
+	background-repeat: no-repeat;
+}
+
+#main .more:hover,
+#quicknav ul li a:hover,
+.boxnav li a:hover{
+	background-image: url(../img/href_bg_hover.png);
+	background-repeat: no-repeat;
+}
+
+#main .more{
+	background-position: right;
+}
+
+#quicknav ul li a,
+.boxnav li a{
+	background-position: left;
+}
+
+.message .top{
+	background-image: url(../img/msg_top_bg.png);
+	background-repeat: no-repeat;
+	background-position: top left;
+}
+
+.message .bot{
+	background-image: url(../img/msg_bot_bg.png);
+	background-repeat: no-repeat;
+	background-position: bottom left;
+}
+
+.message .content{
+	background-image: url(../img/msg_content_bg.png);
+	background-repeat: repeat-y;
+	background-position: bottom left;
+}
+
+.dashboard li.inkooporder_nieuw{
+	background-image: url(../img/nieuwe_inkooporder.png);
+}
+.dashboard li.mijn_inkooporders{
+	background-image: url(../img/mijn_inkooporders.png);
+}
+.dashboard li.klant_nieuw{
+	background-image: url(../img/nieuwe_klant.png);
+}
+.dashboard li.factuur_nieuw{
+	background-image: url(../img/nieuwe_factuur.png);
+}
+.dashboard li.mijn_facturen{
+	background-image: url(../img/mijn_facturen.png);
+}
+.dashboard li.mijn_klanten{
+	background-image: url(../img/klanten_beheren.png);
+}
+.dashboard li.product_index{
+	background-image: url(../img/product_index.png);
+}
+

@@ -1,0 +1,84 @@
+#main{
+	background-color: #fff;
+	color			: #333;
+}
+
+body{
+	background-color: #F7F7F7;
+}
+
+#top,#footer{
+	background-color: #F7F7F7;
+	
+}
+
+.box .content table th {
+    background-color: #58595B;
+    color: #FFFFFF;
+}
+
+#top ul li a,
+#footer ul li a,
+.madeby a,
+#main .more:hover,
+#quicknav ul li a:hover,
+.boxnav li a:hover{
+	color			: #333;
+}
+
+.navigation li a,
+.navigation li,
+.box h1,
+.box .header{
+	color			: #fff;
+}
+
+.box h2{
+	color			: #009FDB;
+}
+
+#main #mainnav  ul.navigation,
+.navigation li{
+	border-color: #fff;
+}
+
+#main #mainnav  ul.navigation li a:hover{
+	background-color: #999999;
+	color			: #333;
+}
+
+a,label,.label,#main .more,#quicknav ul li a,.boxnav li a,.title{
+	color: #009FDB    /* blauw */
+}
+
+#frmlogin .zend_form dd input#submit,.button{
+	background-color: #009FDB;	/* blauw */
+	color: #fff;
+}
+
+
+
+#mainbar .ui-layout-pane{
+	background-color: #003399; !important
+}
+
+.stat_vervallen{
+	background-color:#FF0000;
+	color: #fff;
+}
+
+.stat_nieuw{
+	background-color:#009FDB;
+	color: #fff;
+}
+
+.stat_voldaan{
+	background-color: #99CC33;
+	color: #fff;
+}
+
+.stat_concept{
+	
+	background-color:#58595B;
+	color: #fff;
+}

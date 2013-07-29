@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <link type="text/css" href="./style/style.css" rel="stylesheet" />
+        <title>PHP OAuth Sample</title>
+    </head>
+    <body>
+        <div class="content">
+            <h3>
+                PHP OAuth Sample</h3>
+        </div>
+        <div class="help">
+            <a name="intro"></a>
+            <h3>
+                <a href="#intro">Introduction</a></h3>
+            <p>
+                This sample shows how to authenticate with Windows Live using OAuth WRAP Specification.
+                This sample contains:
+            </p>
+            <ul>
+                <li><b>OAuthHandler.php</b>: This file contains code to demonstrate very basic implementation
+                    of OAuth WRAP specification.</li>
+                <li><b>index.php</b>: This web page demonstrates the usage of OAuthHandler.php and how to request an Access Token from Live Services.</li>
+                <li><b>init.php</b>: This file contains some global variables required to initialise the solution.</li>
+            </ul>
+            <p>
+                To learn more about OAuth WRAP Authentication in Windows Live, please visit <a href="http://go.microsoft.com/fwlink/?LinkId=190630">
+                    Working with OAuth</a>. <br /> Following sections in this page provide the information
+                you need to get this solution running</p>
+            <ul>
+                <li><b><a href="#start">Before you start:</a></b> Describes how to register your application and obtain a client ID and secret key, which are required to run the solution. </li>
+                <li><b><a href="#config">Configuring your solution:</a></b> Specifies the updates that you must make to the Web.config file, and the project properties that you must set </li>
+                <li><b><a href="#run">Running this sample:</a></b> This section briefly outlines how to run this sample. </li>
+                <li><b><a href="#next">Re-using the OAuth WRAP Handler:</a></b> Read this section to see how you can re-use the OAuth WRAP Handler in this sample</li>
+            </ul>
+        </div>
+        <div class="help">
+            <a name="start"></a>
+            <h3>
+                <a href="#start">Before you start</a></h3>
+            <p>
+                Before running this solution, you would need to get a Client ID and Secret Key.
+                You can get this as follows</p>
+            <ol>
+                <li>Sign-in to <a href="http://manage.dev.live.com" target="_blank">http://manage.dev.live.com</a>
+                    using your Windows Live ID</li>
+                <li>Click "Add an application" and provide Application Name, Select Application Type
+                    to be "Web Application"</li>
+                <li>Specify Callback URL e.g. <b>http://www.example.com/index.php</b>,
+                    where <b>www.example.com</b> is replaced with domain name of your application.<b>&nbsp;Note:&nbsp;</b><i>You
+                        would need to specify the Callback URL as registered above in the init.php file of
+                        this solution, see section <a href="#config">Configuring your solution</a> below</i></li>
+                <li>Click "I accept" and make a note of the Client ID and Secret Key on the next page
+                    &nbsp;<b>Note:&nbsp;</b> <i>You would need to specify Client ID and Secret Key in the init.php file
+                        of your solution, see section <a href="#config">Configuring your solution</a> below</i></li>
+                <li>Specify the Connect URL, the Terms of Service URL, the Privacy URL, and the Support
+                    URL. &nbsp;<b>Note:&nbsp;</b><i>The protocol and domain of each of these URLs should
+                        exactly match that of the Callback URL, and should point to valid pages on your
+                        site</i></li>
+                <li>Click "Save"</li>
+            </ol>
+        </div>
+        <div class="help">
+            <a name="config"></a>
+            <h3>
+                <a href="#config">Configuring your solution</a></h3>
+              <h4>Dependecies</h4>
+            <p>The following libraries will need to be installed and configured for
+                the application sample to function correctly.</p>
+            <ul>
+                <li>
+                    cURL/libcurl found at the <a href="http://au.php.net/curl">PHP/CURL homepage</a>
+                </li>
+            </ul>
+            <p>
+                Once you have completed steps for getting Client ID and Secret Key from <a href="http://manage.dev.live.com">
+                    http://manage.dev.live.com</a> (<i>see section <a href="#start">Before you start</a></i>),
+                you need to configure your web application (i.e. this solution).</p>
+            <ol>
+                <li>Open up the init.php file, locate the section <span
+                        style='color: Gray;'>// Application Specific Globals</span> and replace the
+                    following placeholder entries with values for your app from <a href="http://manage.dev.live.com">
+                        http://manage.dev.live.com</a><br />
+                    <br />
+                    <ol>
+                        <li>Replace the placeholder Client ID <i><b>***Your-Client-ID***</b></i> in the following
+                            line
+                            <i>define( <span style='color: Orange;'>'WRAP_CLIENT_ID'</span> , <span style='color: Orange;'>'***Your-Client-ID***'</span> );</i>
+                            <br />
+                        </li>
+                        <li>Replace the placeholder Secret Key <i><b>***Your-Secret-Key***</b></i> in following
+                            line
+                            <i>define( <span style='color: Orange;'>'WRAP_CLIENT_SECRET'</span> , <span style='color: Orange;'>'***Your-Secret-Key***'</span> );</i>
+                            <br />
+                        </li>
+                        <li>Replace the placeholder domain name <i><b>***Your-Domain-Name***</b></i> in following
+                            line
+                            <i>define( <span style='color: Orange;'>'WRAP_CALLBACK'</span> , <span style='color: Orange;'>'***Your-Domain***'</span> );</i>
+                            <br />
+                        </li>
+                    </ol>
+                </li>
+            </ol>
+
+        </div>
+        <div class="help">
+            <a name="run"></a>
+            <h3>
+                <a href="#run">Running the solution</a></h3>
+            <p>
+                To run this solution you will need to have access to a PHP enabled web server. If you are running the server
+			on your local Windows machine you may need to follow these steps:</p>
+            <ol>
+                <li>Configure a localhost name for this solution. To do this, edit the hosts file from
+                    an elevated privilege command prompt (located in the <b><i>%windir%\System32\drivers\etc</i></b>
+                    folder) to add an entry for this template's pre-configured domain. For instance,
+                    if the domain name for your app is http://www.example.com, then you would add the
+                    following entry to the hosts file:
+                    <br />
+                    <br />
+                    <i>&nbsp;&nbsp;&nbsp; 127.0.0.1&nbsp;&nbsp;&nbsp; www.example.com</i><br />
+                </li>
+                <li>Configure <b>Proxy Settings</b> for your browser to add your application domain
+                    name to exception list. e.g. for Internet Explorer following are the steps
+                    <ol>
+                        <li>In Internet Explorer, click on the <i>Tools Menu</i>, and choose <i>Internet Options</i></li>
+                        <li>Click on the <i>Connections</i> Tab</li>
+                        <li>Click on <i>Local Area Network</i> Settings
+                            <ol>
+                                <li>Uncheck <i>Automatically Detect Settings</i></li>
+                                <li>Uncheck <i>Use automatic configuration script</i></li>
+                                <li>Check <i>Use a proxy server for your LAN</i> and provide the address of a valid
+                                    proxy server.</li>
+                                <li>Click on <i>Advanced</i> button, add your domain to the <i>Exception</i> list (e.g.
+                                    www.example.com) and click OK to close the window</li>
+                                <li>Check <i>Bypass proxy server for local addresses</i></li>
+                                <li>Click OK to close the dialog</li>
+                            </ol>
+                        </li>
+                        <li>Click OK to close the <i>Internet Options</i> Window</li>
+                    </ol>
+                </li>
+                <li>Copy the solution folder to your web server so that it is available under your pre-configured domain
+				and navigate to the default page (e.g. http://www.example.com/index.php).</li>
+                <li>Click the <b>Request Consent</b> button and provide the Windows Live ID credentials.</li>
+            </ol>
+        </div>
+        <div class="help">
+            <a name="next"></a>
+            <h3>
+                <a href="#next">Re-using the OAuth WRAP Handler</a></h3>
+            <p>
+                In order to re-use the OAuth WRAP Handler, follow these steps:
+                <ol>
+                    <li>Copy <i>lib\logic\OAuthHandler.cs</i> to your solution.</li>
+                    <li>Include the file in your project with this line of code: <span style='color: Blue;'>
+					require_once</span>(<span style='color: Orange;'>'lib/logic/OAuthHandler.php'</span>); <b>Note:</b>
+					You will need to specify the folder structure that you have placed the file in if it is different to
+                        <i>lib/logic/</i>.</li>
+                    <li>Declare an instance of the OAuthHandler: <span style='color: Maroon'>$oAuth</span> = <span style='color: Blue;'>new</span> OAuthHandler();</li>
+                </ol>
+			You will then have access to the methods contained in OAuthHandler. For example: <span style='color: Maroon;'>$oAuth</span>->getConsentToken
+			(WRAP_CONSENT_URL, <span style='color: Orange;'>$appId</span>, <span style='color: Orange;'>$callbackUrl</span>, <span style='color: Orange;'>$options</span>);
+            </p>
+        </div>
+        <div class="help">
+            <p>
+                Copyright � 2010 Microsoft Corporation. All rights reserved. Legal Notices: <a href="http://www.microsoft.com/legal">
+                    http://www.microsoft.com/legal</a></p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,13 @@
+<? $url = $this->url( array('controller'=>$this->controller,'action'=>'index','module'=>'admin'),NULL,false); ?>
+
+<form class="countselector" action="<?= $url; ?>" method="post"> 
+	<label for="ic">Toon</label>
+	<select id="ic" name="ic" onchange="this.form.submit();">
+	
+		<? $values = array(5,10,20,30,100); ?>
+		<? foreach($values as $value): ?>
+			<option value="<?= $value; ?>" <? if($value==$this->ic):?>selected="selected"<? endif; ?>><?= $value; ?></option>
+		<? endforeach; ?>
+	</select>
+	<label> items per pagina</label>
+</form>

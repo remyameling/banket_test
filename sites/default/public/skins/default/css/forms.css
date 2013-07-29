@@ -1,0 +1,216 @@
+@charset "utf-8";
+/* CSS Document */
+
+form{
+	clear: both;
+	float: left;
+	width: 100%;
+}
+
+/** zend_form **/
+
+.zend_form dt{
+	width			: 20%;
+	float			: left;	
+	margin-bottom	: 10px;
+	clear			: both;
+}
+
+.zend_form dd{
+	width			: 80%;
+	float			: left;	
+	margin-bottom	: 10px;
+}
+
+.zend_form dd input{
+	float			: left;
+}
+
+.zend_form label{
+	width			: 200px;
+	height			: 20px;
+	line-height		: 20px;
+	display			: block;
+}
+
+.errors{
+	float			: right;
+	list-style		: none;
+	margin-left		: 2em;
+	padding			: 1px;
+	height			: 16px;
+}
+
+.errors li{
+	padding: 0;
+	margin: 0;
+	height: 16px;
+	line-height: 16px;
+}
+
+#frmid-label,#frmid-element{
+	display: none;
+}
+
+/** form style voor formulieren in boxen **/
+
+.box .content form input[type=text],
+.box .content form input[type=password],
+.box .content form select{
+	border					: 1px solid #009FDB;
+	padding					: 0px;
+	/*height					: 18px;*/
+}
+
+.box .content form textarea,
+.box .content form input[type=text],
+.box .content form input[type=password]{
+	border					: 1px solid #009FDB;
+	padding					: 0 3px;
+	/*
+	-moz-border-radius		: 10px;
+	-webkit-border-radius	: 10px;	
+	border-radius 			: 10px;
+	*/
+}
+
+.box .content form #fields-label,
+.box .content form #actions-label{
+	display: none;
+}
+
+.box .content form input[type=submit]{
+	border					: 1px solid #009FDB;
+	background-color		: #009FDB;
+	/*
+	-moz-border-radius		: 10px;
+	-webkit-border-radius	: 10px;
+	*/
+	padding					: 0px 20px 0px 20px;
+	/*height					: 20px;*/
+	color					: #fff;
+	font-size				: 12px;
+	cursor					: pointer;
+	
+}
+
+
+
+/** login form */
+
+#login_form{
+	width: 40%;
+}
+
+#login_form #submit-label{
+	display: none;
+}
+
+#frmlogin .zend_form dt{
+	float: none;
+	width: 100%;
+	margin-bottom: 0;
+}
+
+#frmlogin .zend_form dd{
+	float: none;
+	width: 100%;
+	margin-bottom: 5px;
+}
+
+
+
+#frmlogin .zend_form dd input{
+	float: none;	
+	-moz-border-radius		: 10px;
+	-webkit-border-radius	: 10px;
+	width: 100%;
+}
+
+#frmlogin .zend_form dd input#submit{
+	padding-top: 2px;
+	padding-bottom: 2px;
+	width: auto;
+	float: right;
+	clear: both;
+}
+
+#frmlogin{
+	margin-bottom: 20px;
+}
+
+/* frmdatefilter */
+
+#frmdatefilter #date-label,
+#frmdatefilter #submit-element{
+	width: auto;
+}
+
+#frmdatefilter #submit-label{
+	display: none;
+}
+
+#frmdatefilter #date-label label,
+#frmdatefilter #date-element{
+	width: auto;
+	margin-right: 1em;
+}
+
+#frmdatefilter #date-element #date{
+	width: 5em;
+}
+
+
+/* uitval registratie */
+
+#frmregistratie dt{
+	width: 100%;
+	display: block;
+	text-align: center;
+}
+
+#frmregistratie dd{
+	width: 100%;
+	display: block;
+	text-align: center;
+}
+
+#frmregistratie{
+	font-size: large;
+}
+
+#frmregistratie label{
+	float: none;
+	display: inline;	
+}
+
+#frmregistratie select,
+#frmregistratie input{
+	font-size: large;
+	height: 25px;
+	float: none;	
+}
+
+#frmregistratie .errors{
+	display: block;
+	float: none;
+	width: 100%;
+	margin-left: 0;
+	color: #f00;
+	padding: 1em 0;
+}
+
+#baktype-element br{
+	display: none;
+}
+
+#baktype-element label{
+	width: 15%;
+	float: left;
+}
+
+input.datepicker{
+	width: 5em;
+}
+
+

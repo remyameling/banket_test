@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="Acl.php" server="ftp.remyameling.com//httpdocs/knoors/" local="129208261746698000" remote="129216031200000000" />
+<file name="BaseController.php" server="ftp.remyameling.com//httpdocs/knoors/" local="129198879023976000" remote="129216031200000000" />
+<file name="ConfigAcl.php" server="ftp.remyameling.com//httpdocs/knoors/" local="129179738410000000" remote="129216031200000000" />
+<file name="Acl.php" server="ftp.deyas-marketing.nl//httpdocs/" local="129208261746698000" remote="129219389400000000" />
+<file name="BaseController.php" server="ftp.deyas-marketing.nl//httpdocs/" local="129198879023976000" remote="129219389400000000" />
+<file name="ConfigAcl.php" server="ftp.deyas-marketing.nl//httpdocs/" local="129179738410000000" remote="129219389400000000" />
+<file name="Acl.php" server="ftp.knoors.nl//smartbuildingsolutions.nl/testing/" local="129239493336457940" remote="129252290400000000" />
+<file name="BaseController.php" server="ftp.knoors.nl//smartbuildingsolutions.nl/testing/" local="129237524413586000" remote="129252290400000000" />
+<file name="ConfigAcl.php" server="ftp.knoors.nl//smartbuildingsolutions.nl/testing/" local="129237520316626000" remote="129252290400000000" />
+<file name="Menuhelper.php" server="ftp.knoors.nl//smartbuildingsolutions.nl/testing/" local="129248708392387827" remote="129252290400000000" />
+<file name="BaseController.php" server="ftp.remyameling.com//httpdocs/raccms/" local="129331970396593712" remote="129332742000000000" />
+<file name="Mailsender.php" server="ftp.remyameling.com//httpdocs/raccms/" local="129329169270759612" remote="129332742000000000" />
+<file name="OrderStateHelper.php" server="ftp.remyameling.com//httpdocs/raccms/" local="129329066350939612" remote="129332742000000000" />
+<file name="PdfCreator.php" server="ftp.remyameling.com//httpdocs/raccms/" local="129329130525019612" remote="129332742000000000" />
+<file name="Acl.php" server="ftp.remyameling.com//httpdocs/raccms/" local="129299754016317670" remote="129332742000000000" />
+<file name="Cart.php" server="ftp.remyameling.com//httpdocs/raccms/" local="129312680254873697" remote="129332742000000000" />
+<file name="ConfigAcl.php" server="ftp.remyameling.com//httpdocs/raccms/" local="129237520316626000" remote="129332742000000000" />
+<file name="Menuhelper.php" server="ftp.remyameling.com//httpdocs/raccms/" local="129322166600275678" remote="129332742000000000" />
+<file name="Acl.php" server="ftp.debbieameling.com/httpdocs/website/" local="129299754016317670" remote="129340634400000000" />
+<file name="BaseController.php" server="ftp.debbieameling.com/httpdocs/website/" local="129331970396593712" remote="129340634400000000" />
+<file name="Cart.php" server="ftp.debbieameling.com/httpdocs/website/" local="129312680254873697" remote="129340634400000000" />
+<file name="ConfigAcl.php" server="ftp.debbieameling.com/httpdocs/website/" local="129237520316626000" remote="129340634400000000" />
+<file name="Mailsender.php" server="ftp.debbieameling.com/httpdocs/website/" local="129329169270759612" remote="129340634400000000" />
+<file name="Menuhelper.php" server="ftp.debbieameling.com/httpdocs/website/" local="129322166600275678" remote="129340634400000000" />
+<file name="OrderStateHelper.php" server="ftp.debbieameling.com/httpdocs/website/" local="129329066350939612" remote="129340634400000000" />
+<file name="PdfCreator.php" server="ftp.debbieameling.com/httpdocs/website/" local="129329130525019612" remote="129340634400000000" />
+<file name="Acl.php" server="ftp.remyameling.com/httpdocs/raccms/" local="129367366956593590" remote="129369870000000000" />
+<file name="BaseController.php" server="ftp.remyameling.com/httpdocs/raccms/" local="129367309977043590" remote="129369870000000000" />
+<file name="Cart.php" server="ftp.remyameling.com/httpdocs/raccms/" local="129312680254873697" remote="129369870000000000" />
+<file name="ConfigAcl.php" server="ftp.remyameling.com/httpdocs/raccms/" local="129237520316626000" remote="129369870000000000" />
+<file name="Mailsender.php" server="ftp.remyameling.com/httpdocs/raccms/" local="129329169270759612" remote="129369870000000000" />
+<file name="Menuhelper.php" server="ftp.remyameling.com/httpdocs/raccms/" local="129371599676425654" remote="129372231600000000" />
+<file name="OrderStateHelper.php" server="ftp.remyameling.com/httpdocs/raccms/" local="129329066350939612" remote="129369870000000000" />
+<file name="PdfCreator.php" server="ftp.remyameling.com/httpdocs/raccms/" local="129329130525019612" remote="129369870000000000" />
+<file name="Acl.php" server="ftp.debbieameling.com/httpdocs/raccms/" local="129299754016317670" remote="129348340200000000" />
+<file name="BaseController.php" server="ftp.debbieameling.com/httpdocs/raccms/" local="129343171822674867" remote="129348340200000000" />
+<file name="Cart.php" server="ftp.debbieameling.com/httpdocs/raccms/" local="129312680254873697" remote="129348340200000000" />
+<file name="ConfigAcl.php" server="ftp.debbieameling.com/httpdocs/raccms/" local="129237520316626000" remote="129348340200000000" />
+<file name="Mailsender.php" server="ftp.debbieameling.com/httpdocs/raccms/" local="129329169270759612" remote="129348340200000000" />
+<file name="Menuhelper.php" server="ftp.debbieameling.com/httpdocs/raccms/" local="129344147134000111" remote="129348340200000000" />
+<file name="OrderStateHelper.php" server="ftp.debbieameling.com/httpdocs/raccms/" local="129329066350939612" remote="129348340200000000" />
+<file name="PdfCreator.php" server="ftp.debbieameling.com/httpdocs/raccms/" local="129329130525019612" remote="129348340200000000" />
+</dwsync>

@@ -1,0 +1,79 @@
+#index{
+	background-position: top left;
+	background-repeat: no-repeat;
+}
+
+
+
+#index.fileupload{
+	background-image: url('../img/upload.png');
+}
+
+#index.search{
+	background-image: url('../img/search.png');
+}
+
+#index.weblog{
+	background-image: url('../img/weblog.png');
+}
+
+#index.article{
+	background-image: url('../img/article.png');
+}
+
+#index.menu{
+	background-image: url('../img/menu.png');
+}
+
+#index.template{
+	background-image: url('../img/template.png');
+}
+
+#index.form{
+	background-image: url('../img/form.png');
+}
+
+#index.user{
+	background-image: url('../img/user.png');
+}
+
+#index.group{
+	background-image: url('../img/group.png');
+}
+
+#index.setting{
+	background-image: url('../img/settings.png');
+}
+
+#index.customer{
+	background-image: url('../img/customer.png');
+}
+
+#index.order{
+	background-image: url('../img/order.png');
+}
+
+#index.shipping{
+	background-image: url('../img/shipping.png');
+}
+
+#index.category{
+	background-image: url('../img/category.png');
+}
+
+#index.product{
+	background-image: url('../img/product.png');
+}
+
+#index.orderstate{
+	background-image: url('../img/orderstate.png');
+}
+
+#index.optiongroup,#index.option{
+	background-image: url('../img/option.png');
+}
+
+#index.backup{
+	background-image: url('../img/backup.png');
+}
+

@@ -1,0 +1,153 @@
+@charset "utf-8";
+/* CSS Document */
+
+.ui-layout-resizer:onhover{
+	cursor: e-resize;
+	cursor: w-resize;
+}
+
+.headermenu li{
+	display		: block;
+	float		: left;	
+}
+
+.headermenu li a{
+	text-decoration	: none;	
+	padding			: 0 10px;
+}
+
+.navigation{
+	list-style: none;
+}
+
+#main #mainnav  ul.navigation{
+	border-left-style	: dashed;
+}
+
+.navigation li{
+	display				: block;
+	float				: left;	
+	height				: 40px;
+	border-right-width	: 1px;
+	border-right-style	: dashed;
+}
+
+.navigation li a{
+	height			: 40px;
+	line-height		: 40px;	
+	padding			: 0 13px;
+	display			: block;
+	float			: left;
+	text-decoration	: none;	
+}
+
+
+
+#quicknav ul{
+	list-style: none;
+	width: 780px;
+	overflow: hidden;
+	line-height: 30px;
+
+}
+
+#quicknav ul li{
+	display		: block;
+	width		: 240px;
+	float		: left;
+	margin-right: 20px;
+}
+
+#quicknav ul li a{
+	display		: block;
+	padding-left: 20px;	
+	text-decoration: none;
+}
+
+.boxnav{
+	list-style: none;
+	line-height: 2em;
+}
+
+.boxnav li{
+	display: block;
+}
+
+.boxnav li a{
+	padding-left		: 11px;	
+	display				: block;
+	text-decoration		: none;
+}
+
+.dashboard{
+	list-style: none;
+	margin-top: 10px;
+	width: 100%;
+	text-align: center;
+}
+
+.dashboard li{
+	width: 240px;
+	height: 80px;	
+	margin-right: 10px;
+	display: inline;
+	display: inline-block;
+}
+
+.dashboard li a{
+	width: 240px;
+	height: 80px;	
+	display: block;
+}
+
+
+
+/** wizard **/
+
+/** wizard styles **/
+
+ul.wizard{
+	width			 : auto;
+	
+	display			 : block;
+	height			 : 25px;
+	position		 : relative;
+	top				 : 5px;
+	padding-top		 : 5px;
+	padding-left	 : 10px;
+	background-color : #E6E7E8;
+}
+
+ul.wizard li{
+	height			 : 21px;
+	line-height		 : 21px;
+	list-style		 : none;
+	padding			 : 0 20px 0 10px;
+	float			 : left;
+	font-size		 : 12px;
+	color			 : #231F20;
+	background-position: right;
+	background-repeat: no-repeat;
+	background-image: url(../img/wz_default_bg.png);
+	
+}
+
+ul.wizard li.last{	
+	background-image: url(../img/wz_last_bg.png);
+}
+
+ul.wizard li.active{
+	color: #fff;
+	background-image: url(../img/wz_active_bg.png);
+}
+
+ul.wizard li.active.last{
+	color: #fff;
+	background-image: url(../img/wz_completedlast_bg.png);
+}
+
+ul.wizard li.completed{
+	color: #fff;
+	background-image: url(../img/wz_completed_bg.png);
+}
+

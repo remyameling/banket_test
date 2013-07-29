@@ -1,0 +1,25 @@
+.tabs{
+	height				: 24px;	
+	margin				: 0;
+	position			: relative;
+	top					: 11px;
+}
+.tabs li{ 
+	list-style			: none;
+	display				: block;
+	float				: left;			
+	margin-right		: 10px;
+}
+.tabs li a{
+	-moz-border-radius	:10px 10px 0px 0px;
+	text-decoration		: none;
+	display				: block;
+	padding				: 5px 10px;			
+	border-top			:1px solid #DBDBDB;
+	border-left			:1px solid #DBDBDB;
+	border-right		:1px solid #DBDBDB;
+	border-bottom		:1px solid #DBDBDB;	
+}
+.tabs li.active a{
+	border-bottom		:1px solid #fff;					
+}

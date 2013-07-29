@@ -1,0 +1,10 @@
+<?php echo $this->action('index','menu',null,array('menu' => 'headermenu',
+                                                   'ulclass' => 'topnav',
+                                                   'addweblogarticles'=>true)); ?>       
+<? if ($this->inline_edit_allowed): ?>
+	<? if (Zend_Registry::getInstance()->session->inline_edit_mode): ?>
+    	<a title="switch naar normale modus" class="in_edit_mode" href="/index/index/m/view">normale modus</a>
+    <? else: ?>
+    	<a title="switch naar bewerken modus" class="in_edit_mode" href="/index/index/m/edit">bewerken modus</a>
+    <? endif; ?>
+<? endif; ?>

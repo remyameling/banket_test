@@ -1,0 +1,21 @@
+<h1>Dashbord</h1>
+
+<? if($this->confirmed): ?>
+
+	<?= $this->num_errors ?> fout(en) aangepast.<br /><br />
+	<a href="/admin/index/repair">Controleer opnieuw</a><br />
+
+<? else: ?>
+
+	<?= $this->num_errors ?> fout(en) gevonden.<br /><br />
+	
+	<? if ($this->num_errors > 0): ?>
+		<a href="/admin/index/repair/confirm/true">Fouten herstellen</a><br />
+		<a href="/admin">Ga terug.</a>
+	<? else: ?>
+		<a href="/admin">Ga terug.</a>
+	<? endif; ?>
+
+<? endif; ?>
+
+<hr />

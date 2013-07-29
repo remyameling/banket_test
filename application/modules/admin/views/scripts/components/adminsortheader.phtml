@@ -1,0 +1,19 @@
+<thead>
+	<tr>
+		<th class="checkbox"><input type="checkbox" id="checkall" onclick="checkall()" /></th>
+		<th>verplaatsen</th>
+		<?  $num_cols = 0;
+			foreach($this->cols as $name=>$value)
+			{
+				$num_cols++;
+		   		echo '<th scope="col">';
+		   		echo $name;
+				echo '</th>';
+			}
+		?>
+		<? if (count($this->associations) > 0): ?>
+			<th scope="col">Toon</th>
+		<? endif; ?>
+		<th scope="col">Akties</th>
+	</tr>
+</thead>

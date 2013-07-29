@@ -1,0 +1,31 @@
+<h1>Dashbord</h1>
+
+<style>
+	#articlebrowser{
+		width: 30%;
+		float: left;
+	}
+	#editor{
+		width: 70%;
+		float: left;
+	}
+	#editor iframe{
+		width: 98%;
+		min-height: 400px;
+	}
+}
+</style>
+
+<div id="articlebrowser">
+	<table class="index alternate" cellspacing="0">
+		<thead><tr><th>id</th><th>weblog</th><th>artikel</th></tr></thead>
+		<tbody>
+		<? foreach($this->articles as $article): ?>
+			<tr><td><?= $article['id']; ?></td><td><?= $article['weblog_name']; ?></td><td><?= $article['article_title']; ?></td></tr>
+		<? endforeach; ?>
+		</tbody>
+	</table>
+</div>
+<div id="editor">
+	<iframe src="/admin/article/quickedit/id/253"></iframe>
+</div>

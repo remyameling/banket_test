@@ -1,0 +1,20 @@
+<?= 
+	$this->placeholder('content_title')->set("Detail overzicht gescande klantartikels in ENIAC"); 
+	$this->placeholder('content_title')->set("Rapportage gescande pallets voor dit artikel in ENIAC op ".$this->date);
+	$this->placeholder('autorefresh')->set("60");
+?>
+
+<a href="/direct/rapportage/artikels/date/<?= $this->date; ?>">Terug naar totaal overzicht</a>
+
+<?= $this->form; ?>
+
+<?= $this->TableNumItemsform($this->tableHelper,"frm_itemsperpage","Toon:","&nbsp;items per pagina"); ?>
+	        
+<div class="clear"></div>
+<?= $this->TablePagination($this->tableHelper,'pagination/pagination.phtml','Sliding'); ?>
+<hr />
+
+<table id="index" class="default fullwidth clickablerows">
+	<?= $this->TableHeader($this->tableHelper); ?>
+	<?= $this->TableBody($this->tableHelper); ?>
+</table>

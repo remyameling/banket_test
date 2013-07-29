@@ -1,0 +1,16 @@
+<? 
+	$this->placeholder('content_title')->set("Aanmelden als gebruiker");
+?>
+
+<div>
+	<ul>
+	<? foreach($this->members as $userdata): ?>
+		<li><a href="<?= $this->url(array('userid'=>$userdata['id'])); ?>"><?= $userdata['user_alias'] ?></a></li>
+	<? endforeach; ?>
+	</ul>
+</div>
+
+<div class="clear">
+	<hr />
+	<p>Of <a href="/login">Klik hier</a> om als admin in te loggen.</p>
+</div>

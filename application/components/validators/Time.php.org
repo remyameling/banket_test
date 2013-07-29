@@ -1,0 +1,33 @@
+<?php
+
+class My_Validate_Time extends Zend_Validate_Abstract
+{
+    const NOT_VALID  = 'notValid';
+
+    protected $_messageTemplates = array(
+        self::NOT_VALID  => 'Incorrecte tijd. Gebruik het formaat hh:mm'
+    );
+
+    public function isValid($value, $context = null)
+    {
+    		// check if value is a correct time hh:mm ex. 09:00
+    		
+    		if( !preg_match('/^(>?([0-9])|>?([0-1][0-9])|>?([2][0-3])):([0-5][0-9])$/', $value)) {
+    			$this->_error(self::NOT_VALID);
+				return false;	
+    		}
+    		
+    		/* test if hours in the range [00-24] */
+    		
+    		$hours = substr($value,0,2);
+    		if (($hours > 24)){
+    			$this->_error(self::NOT_VALID);
+    			return false;
+    		}
+    		
+    		return true;
+				    	
+    }
+}
+
+?>

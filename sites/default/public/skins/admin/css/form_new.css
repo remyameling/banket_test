@@ -1,0 +1,126 @@
+/* =================== all forms =====================*/
+
+form{
+	padding: 16px 0;
+}
+
+form,form dl{
+	width: 100%;
+	float: left
+}
+
+dd{
+	margin: 0;
+	padding: 0;
+}
+
+
+
+/* tablestyle form: label en element op een regel */
+
+form.tablestyle dt{
+   clear		: both;
+   width		: 20%;		/* linker kolom: 30% */
+   float		: left;
+   text-align	: right;
+}
+
+form.tablestyle dd{
+   float		: left;
+   width		: 80%;		/* rechter kolom 70% */
+   margin		: 0 0 0.5em 0;
+}
+
+
+form.tablestyle label{
+	margin-right: 1em;
+	padding-top: 2px;
+	display: block;
+}
+
+/* liststyle form: label en element op aparte regels */
+
+form.liststyle{
+	margin-left: 5%;
+	width: 95%;
+}
+
+form.liststyle dd{
+	margin: 0;
+}
+
+/* =================== fieldsets =====================*/
+
+fieldset{
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+/* multirow fieldsets */
+
+form dt.multirow{
+	display: none;	/* verberg dt element van fieldset */
+}
+
+form dd.multirow{	/* dd element van fieldset: volle breedte */
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+form dd.dd-singlerow dt{	/* verberg alle dt elementen in de fieldset */
+	display: none;
+}
+
+form dd.dd-singlerow dd{	/* verberg alle dt elementen in de fieldset */
+	width: auto;
+
+}
+
+#frmindex{
+	clear: both;
+	margin-bottom: 3em;
+}
+
+.adminformheader{
+	background-image: url(../img/header_bg.jpg);
+	background-repeat: no-repeat;
+	height: 30px;
+	padding-top: 10px;
+	width:900px;
+}
+
+/* specifieke form rules */
+
+
+
+.adminform,.adminformheader{
+	
+	padding-left: 10px;	
+	float: left;
+}
+
+.adminform{	
+	margin-top: 10px;
+	padding-top: 10px;
+	width:900px;
+	padding-top: 10px;
+	-moz-border-radius-bottomleft:10px;
+	-moz-border-radius-bottomright:10px;
+	-moz-border-radius-topleft:10px;
+	-moz-border-radius-topright:10px;
+	background-color:#FFFFFF;
+	border-color:#DBDBDB;
+	border-style:solid;
+	border-width:1px;
+}
+
+.cke_skin_kama table.cke_editor{
+	width: 100%;
+	width: 880px;
+}
+
+.cke_contents{
+	height: 500px;
+}

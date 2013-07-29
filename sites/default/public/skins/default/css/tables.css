@@ -1,0 +1,44 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+table.default{	
+	border			: 1px solid #58595b;
+}
+
+table.default th{
+	background-color: #58595b;
+	color			: #fff;
+}
+
+table.fullwidth{
+	width: 100%;
+}
+
+table.default td{
+	padding: 0;
+}
+
+
+table.default td,
+table.default th{
+	padding: 2px 0.5em;
+}
+
+
+
+table.default td.num,
+table.default th.num {
+    text-align: right;
+}
+
+table.default td.langetext{
+	max-width: 300px;
+}
+
+table tr:nth-child(odd){ 
+	background-color:#eee;
+}
+table tr:nth-child(even){
+	background-color:#fff;
+}

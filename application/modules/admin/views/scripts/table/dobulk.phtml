@@ -1,0 +1,15 @@
+
+<p>
+Bevestig aktie "<?= $this->bulkaction ?>" van <?= count($this->ids) ?> objecten.
+</p>
+
+<form method="post" action="<?= $this->url( array('controller'=>$this->controller,'action'=>'dobulk')); ?>">
+<? foreach($this->ids as $id): ?>
+		<input type="hidden" name="ids[]" value="<?= $id; ?>" />
+<? endforeach; ?>
+
+<input type="hidden" name="bulkaction" value="<?= $this->bulkaction ?>" />
+<input type="submit" value="bevestigen" name="confirmed" />
+<input type="submit" value="annuleren" name="canceled" />
+
+</form>

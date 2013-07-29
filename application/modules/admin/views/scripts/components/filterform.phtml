@@ -1,0 +1,21 @@
+
+
+<? if ($this->filtervalues !== NULL): ?>
+
+<form class="smallform left" id="frmfilter" action="<?= $this->url( array('module'=>'admin','controller'=>$this->controller,'action'=>$this->action),NULL,true); ?>" method="post">
+
+	<input type="hidden" name="ff" value="<?= $this->filtervalues['filterfield']; ?>" />	
+	<? foreach($this->params as $key=>$value): ?>
+		<input type="hidden" name="<?= $key; ?>" value="<?= $value ?>"></input>
+	<? endforeach; ?>
+	<label><b><?= $this->filtervalues['filterlabel']; ?></b>&nbsp;</label>
+	<select name="fv" id="frmfilter_fv" onchange="this.form.submit();">
+		<? foreach($this->filtervalues['filtervalues'] as $key=>$value): ?>
+			<option value="<?= $key ?>" <?= ($this->filtervalues['filtercurrent'] == $key) ? 'selected="selected"' : ''  ?>><?= $value ?></option>
+		<? endforeach; ?>
+	</select>
+	<!-- input type="submit" name="subm" value="toon"></input -->	
+</form>
+
+
+<? endif; ?>

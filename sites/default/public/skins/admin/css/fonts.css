@@ -1,0 +1,51 @@
+body,textarea{
+	font-family: "Helvetica","Arial",sans-serif;
+	font-size: 12px;
+}
+
+textarea,input{
+	font-family: "Helvetica","Arial",sans-serif;
+	font-size: 13.33px;
+}
+
+#login{
+	font-family: "Helvetica","Arial",sans-serif;
+	color: #505050;
+}
+
+#login h2,#login label,.reset{
+	font-size: 13px;
+	font-weight: normal;
+}
+
+
+table{
+	font-size: 12px;
+}
+
+table.index thead tr th{
+	font-weight: bold;
+}
+
+table.index thead tr th{
+	text-transform: capitalize;
+}
+
+table.index thead tr th a,
+.pag_first,
+.pag_prev,
+.pag_num,
+.pag_active,
+.pag_next,
+.pag_last,
+.disabled{
+	text-decoration: none;
+}
+
+#frmlogin input.login{
+	font-size:13px;
+}
+
+.ui-datepicker{
+	font-size: 80%;
+}

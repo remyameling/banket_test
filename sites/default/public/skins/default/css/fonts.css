@@ -1,0 +1,54 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	font-family: 'Helvetica',Arial, Helvetica, sans-serif;
+	font-size  	: 62.5%;	/* 10px */
+	line-height	: 1.6em;
+}
+
+input,textarea{
+	font-family: 'Helvetica',Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	border: 1px solid #dadada;
+}
+
+#top{
+	font-size: 1em;				/* 10px */
+}
+
+#main,#footer{
+	font-size: 1.2em;			/* 12px */
+}
+
+#main .navigation li{
+	font-size: 1.1667em;		/* 14/12 */
+}
+
+#main .box{
+	font-size: 1.1667em;		/* 14/12 */
+	line-height: 1.5em;
+	text-align: justify;
+}
+
+#main .box table.factuurindex td{
+	font-size: 0.8571em;		/* 12/14 */
+}
+
+#main .box .message,
+#main .box .title{
+	font-size: 1.1429em;		/* 16/14 */
+	font-style: italic;
+	line-height: 1.5em;
+	text-align: justify;
+}
+
+
+input#submit{
+	font-size: 14px;
+}
+
+.more{
+	font-size: 11px;
+}
+

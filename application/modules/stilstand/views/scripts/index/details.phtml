@@ -1,0 +1,31 @@
+<? if(!empty($this->data)): ?>
+
+    <h2>Overicht registraties</h2>
+
+	<table class="default">
+		<thead>
+			<tr>
+				<th>Lijn</th>
+				<th>Starttijd</th>
+				<th>Aantal minuten</th>
+				<th>Categorie</th>
+				<th>Opmerkingen</th>
+			</tr>
+		</thead>
+		<tbody>
+			<? foreach($this->data as $record): ?>
+				<tr>
+					<td><?= $this->Lijnnaam($record['lijnnr']) ?></td>
+					<td><?= $record['starttijd'] ?></td>
+					<td><?= $record['minuten'] ?></td>
+					<td><?= $this->Categorie($record['categorie']) ?></td>
+					<td><?= substr($record['opmerkingen'],0,100); ?></td>
+				</tr>
+			<? endforeach; ?>			
+		</tbody>
+	</table>
+	
+	
+<? else: ?>
+	Geen registraties op <?= $this->date; ?>	
+<? endif; ?>

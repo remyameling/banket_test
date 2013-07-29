@@ -1,0 +1,51 @@
+<?= $this->HeadScript()->appendFile("/js/jquery/jquery-1.3.2.min.js"); ?>
+<?= $this->HeadScript()->appendFile("/js/components/treeview/filter_table.js"); ?>
+<?= $this->HeadScript()->appendFile("/js/components/treeview/jquery.treeview.js"); ?>
+<?= $this->HeadLink()->appendStylesheet("/js/components/treeview/css/treeview.css"); ?>
+
+<? echo $this->partial('components/tablemenu.phtml',	array('actions'=>$this->tableactions,'currentaction'=>'index')); ?>
+
+
+
+
+<h1>Navigatie</h1>
+
+<? echo $this->partial('components/filterform.phtml',array('controller'=>$this->controller,
+														   'filtervalues'=>$this->filtervalues,
+														   'action'=>$this->index,'params'=>array())); ?>
+
+<div id="navigation_controller">
+	<div id="leftcol">
+		<script>
+		    $(document).ready(function(){
+				$(".treeview").treeview({unique: true,animated:"fast",collapsed:true});	// treeview initialiseren
+		    });
+		</script>
+		
+		<?= $this->menu_tree; ?>
+	</div>
+	<div id="rightcol">
+		<table class="result">
+			<tbody>
+			<? foreach($this->menu_items as $menu_item): ?>
+				<tr rel="<?= $menu_item['id']; ?>">
+					<td>
+						<h2>Menuitem details</h2>
+						
+						<dl>
+							<dt>Naam</dt>
+							<dd><?= $menu_item['menuitem_label']; ?></dd>
+							<dt>Type</dt>
+							<dd><?= $menu_item['type']; ?></dd>
+						
+						</dl>
+						<ul>
+							<li><a href="/admin/menuitem/sort/ff/menu_id/fv/<?= $menu_item['menu_id']; ?>">Sortering aanpassen</a></li>
+						</ul>
+					</td>
+				</tr>
+			<? endforeach; ?>
+			</tbody>
+		</table>
+	</div>
+</div>

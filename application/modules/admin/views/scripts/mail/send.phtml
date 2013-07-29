@@ -1,0 +1,17 @@
+<?= $this->HeadScript()->appendFile("/js/ba-debug.js"); ?>
+
+
+
+<? if($this->show_confirm): ?>
+	<h2>Bevesting versturen e-mail naar de volgende users:</h2>
+	
+	<ul>
+		<? foreach($this->users as $user): ?>
+			<li><?= $user['user_email']; ?> (<?= $user['user_alias']; ?>)</li>
+		<? endforeach; ?>
+	</ul>
+	<a href="/admin/mail/send/id/<?= $this->id; ?>/group_id/<?= $this->group; ?>/confirmed/1/cascade/<?= $this->cascade; ?>">Nu versturen</a>
+<? else: ?>
+	<?= $this->form; ?>
+<? endif; ?>
+

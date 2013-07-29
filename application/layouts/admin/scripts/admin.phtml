@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" />
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<!-- admin.phtml -->
+
+<?= $this->partial('components/head.phtml',array()); ?>
+
+<?  
+	echo $this->HeadScript()."\n";
+	echo $this->loadSkin("admin")."\n";
+	echo $this->HeadLink()."\n";
+?>	
+
+
+
+</head> 
+
+<body onload="initAdmin()">
+	<div id="header">
+	    <div id="header-navigation">
+	    	<? echo $this->partial('components/navigation.phtml',array()); ?>    
+	    </div>
+	</div>
+
+	<div id="content">
+		<?php echo $this->layout()->content ?>
+	</div>
+</body>
+</html>

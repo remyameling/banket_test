@@ -1,0 +1,44 @@
+<? if(!empty($this->data)): ?>
+
+    <h2>Uitval per dienst per lijn</h2>
+
+	<table class="default">
+		<thead>
+			<tr>
+				<th>Dienst</th>
+				<? foreach($this->lijnen as $lijnnr=>$dummy): ?>
+					<th><?= $this->Lijnnaam($lijnnr) ?></th>				
+				<? endforeach; ?>
+				<th>Eindtotaal</th>
+			</tr>
+		</thead>
+		<tbody>
+			<? foreach($this->diensten as $dienst_id=>$dienstnaam): ?>
+				<tr>
+					<td><?= $dienstnaam ?></td>
+					<? foreach($this->lijnen as $lijnnr=>$dummy): ?>
+						<? if (isset($this->data[$dienst_id][$lijnnr])): ?>
+							<td class="num"><?= $this->data[$dienst_id][$lijnnr] ?></td>
+						<? else: ?>
+							<td class="num">-</td>
+						<? endif; ?>		
+					<? endforeach; ?>
+					<td class="num"><?= $this->totaal_per_dienst[$dienst_id]; ?></td>
+				</tr>
+			<? endforeach; ?>
+			<tr>
+				<td>Eindtotaal</td>
+				<? $totaal=0; ?>
+				<? foreach($this->lijnen as $lijnnr=>$lijntot): ?>
+					<? $totaal += $lijntot; ?>  			
+					<td class="num"><?= $lijntot; ?></td>			
+				<? endforeach; ?>
+				<td class="num"><?= $totaal; ?></td>
+			</tr>
+		</tbody>
+	</table>
+	
+	
+<? else: ?>
+	Geen registraties op <?= $this->date; ?>	
+<? endif; ?>

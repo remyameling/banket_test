@@ -1,0 +1,45 @@
+<? if(!empty($this->data)): ?>
+
+	<h2>Overzicht registraties per categorie, per lijn</h2>
+
+	<table class="default">
+		<thead>
+			<tr>
+				<th>Categorie</th>
+				<? foreach($this->data as $lijnnr=>$rec): ?>
+					<th><?= $this->Lijnnaam($lijnnr) ?></th>				
+				<? endforeach; ?>
+				<th>Eindtotaal</th>
+			</tr>
+		</thead>
+		<tbody>
+			<? foreach($this->category as $categorie=>$val): ?>
+				<tr>
+					<td><?= $this->Categorie($categorie,$this->site_name); ?></td>
+					<? foreach($this->data as $lijnnr=>$rec): ?>
+						<? if (isset($rec[$categorie])): ?>
+							<td class="num"><?= $rec[$categorie]['minuten']; ?></td>
+						<? else: ?>
+							<td></td>
+						<? endif; ?>		
+					<? endforeach; ?>
+					<td class="num"><?= $this->totaal_per_category[$categorie]; ?>
+					</td>
+				</tr>
+			<? endforeach; ?>
+			<tr>
+				<td>Eindtotaal</td>
+				<? $totaal=0; ?>
+				<? foreach($this->lijnnr as $lijn=>$value): ?>
+					<? $totaal += $this->totaal_per_lijn[$lijn]; ?>  			
+					<td class="num"><?= $this->totaal_per_lijn[$lijn]; ?></td>			
+				<? endforeach; ?>
+				<td class="num"><?= $totaal; ?></td>
+			</tr>
+		</tbody>
+	</table>
+	
+	
+<? else: ?>
+	Geen registraties op <?= $this->date; ?>	
+<? endif; ?>

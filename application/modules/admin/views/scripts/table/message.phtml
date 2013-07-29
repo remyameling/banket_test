@@ -1,0 +1,15 @@
+<h1>Bevestig verwijderen <?=$this->domain_displayname ?></h1>
+
+<p><a href="/admin/<?= $this->controller; ?>">Terug naar overzicht</a></p>
+
+<p>
+
+<a href="<?= $this->url( array('controller'=>$this->ctrl,
+							   'action'=>'index'),null,false); ?>">Annuleren</a>
+<a href="<?= $this->url( array('controller'=>$this->ctrl,
+							   'action'=>'delete',
+							   'id'=>$this->id,
+							   'confirm'=>'true')); ?>">Bevestigen</a>
+</p>
+
+<div class="clear">&nbsp;</div>							   

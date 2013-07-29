@@ -1,0 +1,25 @@
+<? if(!empty($this->data)): ?>
+
+    <h2>Uitval per baktype</h2>
+
+	<table class="default">
+		<thead>
+			<tr>
+				<th>Bak</th>
+				<th>Totaal</th>
+			</tr>
+		</thead>
+		<tbody>
+			<? foreach($this->data as $bakgroepnaam=>$rec): ?>
+				<tr>
+					<td><?=  $bakgroepnaam; ?></td>
+					<td class="num"><?= $this->Gewicht($rec[0]['gewicht'],""); ?></td>
+				</tr>
+			<? endforeach; ?>
+		</tbody>
+	</table>
+	
+	
+<? else: ?>
+	Geen registraties op <?= $this->date; ?>	
+<? endif; ?>

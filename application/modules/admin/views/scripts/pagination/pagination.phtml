@@ -1,0 +1,40 @@
+<!--
+See http://developer.yahoo.com/ypatterns/pattern.php?pattern=searchpagination
+-->
+
+<?php if ($this->pageCount): ?>
+<div class="paginationControl">
+	<!-- Previous page link -->
+    
+    <? if (isset($this->first)): ?>
+    	<a href="<?= $this->url(array('page' => $this->first)); ?>" class="pag_first"><span>&lt; Eerste</span></a>
+    <? endif; ?>
+    
+	<?php if (isset($this->previous)): ?>
+		<a href="<?php echo $this->url(array('page' => $this->previous)); ?>" class="pag_prev"><span>Vorige</span></a>
+	<?php else: ?>
+		<span class="disabled"><span>Vorige</span></span>
+	<?php endif; ?>
+	
+	<!-- Numbered page links -->
+	<?php foreach ($this->pagesInRange as $page): ?>
+	  <?php if ($page != $this->current): ?>
+		<a href="<?php echo $this->url(array('page' => $page)); ?>" class="pag_num"><?php echo $page; ?></a>
+	  <?php else: ?>
+		<span class="pag_active"><?php echo $page; ?></span>
+	  <?php endif; ?>
+	<?php endforeach; ?>
+	
+	<!-- Next page link -->
+	<?php if (isset($this->next)): ?>
+	  <a href="<?php echo $this->url(array('page' => $this->next)); ?>" class="pag_prev"><span>Volgende</span></a>
+	<?php else: ?>
+	  <span class="disabled"><span>Volgende</span></span>
+	<?php endif; ?>
+    
+    <? if (isset($this->last)): ?>
+    	<a href="<?= $this->url(array('page' => $this->last)); ?>" class="pag_last"><span>Laatste &gt;</span></a>
+    <? endif; ?>
+    
+</div>
+<?php endif; ?>

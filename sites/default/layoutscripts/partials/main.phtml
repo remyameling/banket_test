@@ -1,0 +1,62 @@
+<?php
+	
+	if ($this->placeholder('header_pic') == "")
+		$this->placeholder('header_pic')->set("slogan.png");
+	
+	if (!isset($this->placeholder('sidebar')->modules))		
+		$this->placeholder('sidebar')->modules = array('login'=>true,'nieuwe_account'=>true);
+
+	if ($this->placeholder('content_title') == "")
+		$content_title = "";
+	else
+		$content_title = $this->placeholder('content_title');
+	
+?>
+
+
+<div id="top">
+        <div class="board">
+               
+       </div>                 
+</div>
+    
+<div id="main">
+    	<div class="board">
+            <div id="header">
+                <?= $this->partial('partials/header.phtml',array()); ?>         
+            </div>
+            
+            <div id="mainnav">
+                <?= $this->partial('partials/mainnav.phtml',array()); ?>
+            </div> 
+            
+            <div id="content">
+            
+            	<div class="box large">
+					<h1><?= $content_title; ?></h1>
+            	
+            		<div class="content">
+            			<?= $this->layout()->content; ?>
+            			<div class="clear"></div>
+            		</div>
+            	</div>
+                <div class="clear"></div>
+            </div>
+        </div>
+</div>
+    
+<div id="footer">
+        <div class="board">
+            <?= $this->partial('partials/footer.phtml',array()); ?>
+        </div>
+</div> 
+
+<script>    
+    $( ".datepicker" ).datepicker({dateFormat:'dd-mm-yy',
+        						   firstDay:1,
+        						   dayNamesMin: [ "Zo", "Ma", "Di", "Wo", "Do", "Vr", "Za" ],
+        						   monthNames: [ "Januari", "Februari", "Maart", "April", "Mei", "Juni", "Juli", "Augustus", "September", "Oktober", "November", "December" ],
+        						   showWeek: true,
+        						   nextText: "Volgende",
+        						   prevText: "Vorige" });
+</script>

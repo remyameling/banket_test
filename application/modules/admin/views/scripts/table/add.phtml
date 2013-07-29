@@ -1,0 +1,11 @@
+<div id="index" class="<?= $this->controller ?>">
+
+<? echo $this->partial('components/tablemenu.phtml',	array('actions'=>$this->tableactions,'currentaction'=>'add')); ?>
+
+<h1>Toevoegen <?= $this->domain_displayname ?></h1>
+
+<?= $this->form ?>
+
+<div class="clear">&nbsp;</div>
+
+</div>

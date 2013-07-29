@@ -1,0 +1,11 @@
+<? if ($this->item['childs'] === NULL): ?>
+	<li id="<?= $this->item['id']; ?>"><a href="#"><?= $this->item[$this->labelfield]; ?></a></li>
+<? else: ?>
+	<li id="<?= $this->item['id']; ?>"><a href="#"><?= $this->item[$this->labelfield]; ?></a>
+	<ul>
+		<? foreach ($this->item['childs'] as $child): ?>
+			<?= $this->partial('components/menu_item.phtml',array('item'=>$child,'labelfield'=>$this->labelfield)); ?>
+		<? endforeach; ?>
+	</ul>
+	</li>
+<? endif;?>

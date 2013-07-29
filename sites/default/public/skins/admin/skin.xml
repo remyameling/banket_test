@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<skin>
+	<stylesheets>
+		<stylesheet>colors.css</stylesheet>
+		<stylesheet>backgrounds.css</stylesheet>
+		<stylesheet>fonts.css</stylesheet>
+		<stylesheet>tables.css</stylesheet>
+		<stylesheet>forms.css</stylesheet>
+		<stylesheet>layout.css</stylesheet>
+		<stylesheet>content.css</stylesheet>
+		<stylesheet>dashbord.css</stylesheet>
+		<stylesheet>styles.css</stylesheet>
+		<stylesheet>tabs.css</stylesheet>		
+	</stylesheets>
+</skin>

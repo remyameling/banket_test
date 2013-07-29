@@ -1,0 +1,42 @@
+<div id="index" class="<?= $this->controller ?>">
+
+	<? echo $this->partial('components/tablemenu.phtml',array('actions'=>$this->tableactions,
+															  'currentaction'=>'edit',
+															  'controller'=>$this->controller,
+															  'previous_id'=>$this->previous_id,
+															  'next_id'=>$this->next_id)); ?>
+	
+	<h1>Wijzigen <?= $this->domain_displayname ?></h1>
+	
+	<?= $this->navigation()->menu()->setUlClass('tabs')->render($this->tabs); ?>
+	
+	<div class="content">	
+		<? if (isset($this->file_name)): ?>
+			<div class="form_dd_col">
+				<a target="blank" href="<?= $this->file_url; ?>">
+					<img class="sample_pic" src="<?= $this->file_name; ?>" alt="<?= $this->file_title; ?>" />
+				</a>					
+			</div>				
+		<? endif; ?>
+		
+		<?= $this->form ?>
+		
+		<div class="clear">&nbsp;</div>
+	</div>
+
+</div>
+
+<? if (isset($this->file_name)): ?>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.form_dd_col').insertBefore('.adminform #<?= $this->fieldname; ?>');
+			$('#<?= $this->fieldname; ?>').wrap('<div class="form_dd_col" />');
+
+			<? if (isset($this->file_delete)): ?>
+				$('<br /><a class="img_delete_link" href="<?= $this->file_delete; ?>">verwijderen</a>').insertAfter('.adminform #<?= $this->fieldname; ?>');
+			<? endif; ?>
+			
+			$('.adminform #<?= $this->fieldname; ?>').css('float','left');
+		});
+	</script>
+<? endif; ?>

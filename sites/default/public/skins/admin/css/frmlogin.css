@@ -1,0 +1,76 @@
+/** login form **/
+
+
+#frmlogin{
+	margin-left	: 160px;
+	padding-top	: 0px;
+	height: 124px;
+}
+
+#frmlogin dt,#frmlogin dd{
+	height: 35px;
+}
+
+#frmlogin dt#submit-label,#frmlogin dd#submit-element{
+	height: 15px;
+}
+
+#frmlogin dt{
+	width: 80px;
+	padding-top: 5px;
+}
+
+#frmlogin dd{
+	width: 132px;
+}
+
+#frmlogin input.login{
+	-moz-border-radius-bottomleft:10px;
+	-moz-border-radius-bottomright:10px;
+	-moz-border-radius-topleft:10px;
+	-moz-border-radius-topright:10px;
+	border:1px solid #CCCCCC;
+	height:13px;
+	margin-left:0px;
+	padding:2px 0 0 10px;
+	width:120px;
+	display: block;
+	margin-bottom: 1.8em;
+	margin-top: 8px;
+}
+
+
+#frmlogin input.submit{
+	-moz-border-radius-bottomleft:3px;
+	-moz-border-radius-bottomright:3px;
+	-moz-border-radius-topleft:3px;
+	-moz-border-radius-topright:3px;
+	margin-left: 60px;
+	padding: 3px 5px;
+	border: none;
+}
+
+#frmlogin ul.errors,.loginerror{
+	-moz-background-clip			:border;
+	-moz-background-inline-policy	:continuous;
+	-moz-background-origin			:padding;
+	-moz-border-radius-bottomleft	:10px;
+	-moz-border-radius-bottomright	:10px;
+	-moz-border-radius-topleft		:10px;
+	-moz-border-radius-topright		:10px;
+	background						:#FEB1B1 none repeat scroll 0 0;
+	background-image				: url(../img/remove.png);
+	background-position				: 10px 10px;
+	background-repeat				: no-repeat;
+	border							:1px solid #FE9090;
+	padding							:12px 40px;
+	width							:418px;
+}
+
+#frmlogin ul.errors{	
+	height							:16px;
+	position						:relative;
+	width							: 412px; 
+	top								: -180px;
+	left							: -230px;
+}

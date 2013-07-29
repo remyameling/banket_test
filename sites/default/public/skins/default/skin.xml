@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<skin>
+	<stylesheets>
+		<stylesheet filename="reset.css" />
+		<stylesheet filename="layout.css" />		
+		<stylesheet filename="color.css" />
+		<stylesheet filename="backgrounds.css" />		
+		<stylesheet filename="dropdown.css" />
+		<stylesheet filename="fonts.css" />
+		<stylesheet filename="forms.css" />
+		<stylesheet filename="box.css" />			
+		<stylesheet filename="forms.css" />
+		<stylesheet filename="tables.css" />
+		<stylesheet filename="content.css" />		
+		<stylesheet filename="tooltip.css" />		
+		<stylesheet filename="print.css" media="print"  />
+	</stylesheets>
+</skin>

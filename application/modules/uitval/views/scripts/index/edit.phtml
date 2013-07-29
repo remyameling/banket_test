@@ -1,0 +1,16 @@
+<script>
+	$(document).ready(function(){ 
+		
+		$("#lijnnr").attr("filter","categorie");
+		initFilters();		 
+	});	
+</script>
+
+<? 
+	$this->HeadScript()->appendFile("/js/components/multilevel/filter.js");
+	
+	$this->placeholder('content_title')->set("Stilstand registratie");
+	
+?>
+
+<?= $this->form; ?>

@@ -1,0 +1,17 @@
+<div class="box large">
+	<h1>Er is een fout opgetreden (Exceptie)</h1>
+	<div class="content">
+		<h2><?php echo $this->message ?></h2>
+		
+		<p><b>Message:</b> <?php echo $this->exception->getMessage() ?></p>
+		
+		<h3>Stack trace:</h3>
+		<hr />
+		  
+		  <pre><?php echo $this->exception->getTraceAsString() ?>
+		  </pre>
+		<hr />		  
+		<h3>Request Parameters:</h3>
+		<pre><?php echo var_export($this->request->getParams(), true) ?></pre>
+	</div>
+</div>

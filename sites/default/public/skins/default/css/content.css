@@ -1,0 +1,63 @@
+@charset "utf-8";
+/* CSS Document */
+
+#slider ul,#factuursummary ul{
+	list-style: none;
+}
+
+#slider ul li img{
+	width: 720px;
+	height: 330px;
+}
+
+#klantlist ul{
+	list-style: none;
+	height: 400px;
+	overflow: scroll;
+	overflow-x: hidden;
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+}
+
+#klantlist ul li{
+	border-bottom: dashed 1px #000;
+	
+}
+
+#klantlist ul li span{
+	display: block;
+}
+
+#klantlist ul li .klantnaam,
+#klantlist ul li .acties{
+	float: left;
+}
+
+#klantlist ul li .klantnaam{
+	width: 170px;
+}
+#klantlist ul li .acties{
+	width: 25px;
+}
+.box .button1{
+	float: right;
+	height: 14px;
+	line-height: 14px;
+	margin-bottom: 20px;
+}
+
+/** module direct **/
+
+#orders{ overflow:scroll; display: block; width: 100%; }
+#orders dl{ width: 500%;}
+#orders dt{ line-height: 3em; display:block; float: left; margin-right: 10px;}
+#orders dd{ line-height: 3em; float: left}
+#orders li.order{ margin: 1em 5px; line-height: 1em; display:block; float:left; font-size: 0.8em;background-color: #58595B;color: fff;}
+#orders li.order a {text-decoration:none}
+#orders li.order a.not {background-color: #009FDB;  }
+#orders li.order a.partly {background-color: #CC9900;  }
+#orders li.order span,li.order a {padding: 0.2em 1em;display:inline-block;color:#fff;}
+#orders hr{ clear:both; }
+
+
+

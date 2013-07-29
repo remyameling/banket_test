@@ -1,0 +1,48 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*
+	gebruik   <div class="nbox large_of_small">
+			  		<h1>titel</h1>   of <div class="header">titel</div>
+					
+					<div class="content">content</div>
+					
+					<div class="footer"></div>
+			  </div>
+*/
+
+.box{
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.box .header,.box h1{
+	height: 30px;	
+	line-height: 30px;
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	-moz-border-radius-topleft: 10px;
+	-moz-border-radius-topright: 10px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;	
+	background-color: #009FDB;
+	padding: 0 20px;
+}
+
+.box .content{
+	background-color: #E6E7E8;
+	-webkit-border-bottom-left-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	-moz-border-radius-bottomleft: 10px;
+	-moz-border-radius-bottomright: 10px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;	
+	
+	background-color: #e6e7e8;
+	padding: 20px 20px 40px 20px;
+	text-align: justify;
+}
+
+.box h2{
+	margin: 0.5em 0;
+}

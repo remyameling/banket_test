@@ -1,0 +1,11 @@
+<p><a href="/admin/newsletter">Terug naar overzicht</a></p>
+
+<h1>Bevestig versturen van de nieuwsbrief "<?=$this->name ?>" aan <?= $this->num_subscribers; ?> ontvanger(s)</h1>
+
+<p>
+
+<a class="abutton" href="<?= $this->url( array('controller'=>'newsletter','action'=>'index'),null,false); ?>">Annuleren</a>
+<a class="abutton" href="<?= $this->url( array('controller'=>'newsletter','action'=>'send','id'=>$this->id,'confirm'=>'true')); ?>">Bevestigen</a>
+</p>
+
+<div class="clear">&nbsp;</div>							   

@@ -1,0 +1,31 @@
+<div id="tablemenu">
+	<? if ($this->actions !== NULL): ?>
+		<? $first = true; ?>
+		<? foreach($this->actions as $action): ?>
+			<? if ($this->currentaction !== $action['actionname']): ?>
+				<? if (!$first) 
+				   	echo "|"; 
+				   else 
+				   	$first = false;
+				?>
+				<a class="buttons" href="<?= $this->url($action['urlparams'],NULL,true); ?>"><?= $action['menuname'];?></a>
+			<? endif; ?>
+		<? endforeach; ?>
+	<? endif; ?>
+	
+	<? if($this->previous_id !== NULL): ?>
+			| <a class="buttons" href="<?= $this->url(array('module'=>'admin',
+															'controller'=>$this->controller,
+															'action'=>'edit',
+															'id'=>$this->previous_id),'default',false) ?>">Vorige</a>
+	<? endif; ?>
+		
+	<? if($this->next_id !== NULL): ?>
+			| <a class="buttons" href="<?= $this->url(array('module'=>'admin',
+															'controller'=>$this->controller,
+															'action'=>'edit',
+															'id'=>$this->next_id),'default',false) ?>">Volgende</a>
+	<? endif; ?>
+	
+</div>
+<div class="clear">&nbsp;</div>

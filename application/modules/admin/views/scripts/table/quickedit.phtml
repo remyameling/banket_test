@@ -1,0 +1,43 @@
+<div id="index" class="<?= $this->controller ?>">
+
+	<? echo $this->partial('components/tablemenu.phtml',array('actions'=>$this->tableactions,
+															  'currentaction'=>'edit',
+															  'controller'=>$this->controller,
+															  'previous_id'=>$this->previous_id,
+															  'next_id'=>$this->next_id)); ?>
+	
+	
+		
+	
+	
+	<h1>Wijzigen <?= $this->domain_displayname ?></h1>
+	
+	
+	
+	<?= $this->navigation()->menu()->setUlClass('tabs')->render($this->tabs); ?>
+	
+	<div class="content">	
+		<? if (isset($this->file_name)): ?>
+			<? if ($this->file_mimetype == Zend_Registry::getInstance()->types->images->gif): ?>
+				<div class="sample_pic_container">
+					<img class="sample_pic" src="<?= $this->file_name; ?>" alt="<?= $this->file_title; ?>" />
+				</div>
+			<? elseif ($this->file_mimetype == Zend_Registry::getInstance()->types->images->jpeg): ?>
+				<div class="sample_pic_container">
+					<img class="sample_pic" src="<?= $this->file_name; ?>" alt="<?= $this->file_title; ?>" />
+				</div>
+			<? elseif ($this->file_mimetype == Zend_Registry::getInstance()->types->images->png): ?>
+				<div class="sample_pic_container">
+					<img class="sample_pic" src="<?= $this->file_name; ?>" alt="<?= $this->file_title; ?>" />
+				</div>
+			<? else: ?>
+				<a mime="<?= $this->file_mimetype; ?>" target="blank" href="<?= $this->file_name; ?>"><img src="/img/admin/<?= $this->GetFileIcon($this->file_mimetype); ?>" /></a>
+			<? endif; ?>	
+		<? endif; ?>
+		
+		<?= $this->form ?>
+		
+		<div class="clear">&nbsp;</div>
+	</div>
+
+</div>

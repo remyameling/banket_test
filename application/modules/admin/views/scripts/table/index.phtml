@@ -1,0 +1,68 @@
+<div id="index" class="<?= $this->controller ?>">
+
+
+
+<? echo $this->partial('components/tablemenu.phtml',	array('actions'=>$this->tableactions,'currentaction'=>'index')); ?>
+
+
+<h1>Overzicht <?=$this->domain_displayname ?> (aantal : <?= $this->paginator->getTotalItemCount(); ?>)</h1>
+
+
+
+<? echo $this->partial('components/filterform.phtml',array('controller'=>$this->controller,
+														   'filtervalues'=>$this->filtervalues,
+														   'action'=>$this->index,'params'=>array())); ?>
+
+<?= $this->navigation()->menu()->setUlClass('tabs')->render($this->tabs); ?>
+
+<form id="frmindex" action="<?= $this->url( array('controller'=>$this->controller,'action'=>'dobulk')); ?>" method="post">
+
+<div class="clear"></div>
+	<div class="alpha_paginator"><?= $this->AlphaPaginator($this->alfa_paginator); ?></div>
+<div class="clear"></div>
+
+<table id="index" class="index alternate" cellspacing="0">
+
+	
+
+    <? echo $this->partial('components/admintableheader.phtml',	array('num_cols'=>$this->num_cols,
+    																  'cols'=>$this->cols,
+    																  'sorts'=>$this->sorts,
+    																  'controller'=>$this->controller,
+    																  'associations'=>$this->associations,    																  
+  																	  'cursort'=>$this->sort,
+    																  'curorder'=>$this->order,
+    																  'sortableitems'=>$this->sortableitems)); ?>
+    <? echo $this->partial('components/admintablebody.phtml',	array('paginator'=>$this->paginator,
+    																  'cols'=>$this->cols,
+    																  'decoder'=>$this->decoder,
+    																  'entry'=>$this->entry,
+    																  'controller'=>$this->controller,
+    																  'associations'=>$this->associations,
+    																  'sortableitems'=>$this->sortableitems,
+    																  'pag'=>$this->paginator,
+    																  'rowactions'=>$this->rowactions)); ?>
+        
+</table>
+
+<? if (count($this->bulk_actions) > 0): ?>
+	<div id="bulk">
+		<label for="bulk_actions">Bulk aktie:</label>
+		<select id="bulk_actions" name="bulkaction">
+			<? foreach($this->bulk_actions as $action): ?>
+			<option><?= $action; ?></option>
+			<? endforeach; ?>
+		</select>
+		<input type="submit" id="submitsort" value="uitvoeren"></input>
+	</div>
+<? endif; ?>
+</form>
+
+<div id="pagination">
+	<?= $this->paginationControl($this->paginator, 'Sliding', 'pagination.phtml'); ?>
+	<?= $this->partial('components/countselector.phtml',	
+					   array('controller'=>$this->controller,'ic'=>$this->ic)); ?>
+</div>	
+
+</div>
+

@@ -1,0 +1,21 @@
+<!--
+See http://developer.yahoo.com/ypatterns/pattern.php?pattern=searchpagination
+-->
+
+<?php if ($this->pageCount): ?>
+<div class="paginationControl">
+	<!-- Previous page link -->
+    
+    <?php if (isset($this->previous)): ?>
+		<a href="<?php echo $this->url(array('page' => $this->previous)); ?>" class="pag_prev"><span>vorige</span></a>
+	<?php endif; ?>
+	
+	<!-- Next page link -->
+	<?php if (isset($this->next)): ?>
+	  <a href="<?php echo $this->url(array('page' => $this->next)); ?>" class="pag_prev"><span>volgende</span></a>
+	<?php endif; ?>
+    
+    
+    
+</div>
+<?php endif; ?>

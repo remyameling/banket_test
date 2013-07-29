@@ -1,0 +1,25 @@
+001:
+
+Toevoegen 5 orders voor 4 artikels op 1-1-2011
+
+1000 x (A) 511113702 (13)
+1000 x (B) 511113704 (13)
+2000 x (C) 511113705 (25)
+1000 x (D) 511109501 (13)
+
+002:
+
+Wijzigen datum van 1ste order					1000 x (A) 511113702 (13) -> 1-2-2011
+Toevoegen nieuwe order op 2-1-2011		1000 x (B) 511113704 (13)
+Verwijderen oude order op 1-1-2011		2000 x (C) 511113705 (25) -> 1000x (13)   
+
+003:
+
+Muteren oude order op 2-1-2011										1000 x (B) 511113704 (25) -> 2000x (38) XXX
+Datum + aantal wijzigen oude order op 2-1-2011:   1000 x (A) 511113702 (13) 2-1-2011 => 3000 x (A) 511113702 (36) 3-1-2011
+
+004:
+
+Muteren (geplande) order op 3-1-2011							3000 x (A) 511113702 (36) 3-1-2011 => 3000 x (A) 511113702 (36) 3-1-2011
+Muteren (geplande) order op 2-1-2011							2000 x (B) 511113704 (25) 2-1-2011 => 1000 x (B) 511113704 (13) 2-1-2011
+Nieuwe orders op 4-1-2011 3x10.000 A,B,C

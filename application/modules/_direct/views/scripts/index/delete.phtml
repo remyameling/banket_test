@@ -1,0 +1,5 @@
+<? $this->placeholder('content_title')->set("Bevestig verwijderen van deze registratie"); ?>
+
+<p>Registratie verwijderen ?</p>
+
+<a href="<?= $this->url(array('confirm'=>true)); ?>">Verwijderen</a> | <a href="<?= $this->url(array('action'=>'table','controller'=>'index','module'=>'direct'),NULL,true); ?>">Annuleren</a>

@@ -1,0 +1,25 @@
+<script>
+	$(document).ready(function(){ 
+		$("#lijnnr").attr("filter","categorie");
+		initFilters();		 
+	});
+</script>
+
+<? 
+	$this->HeadScript()->appendFile("/js/components/multilevel/filter.js");	
+	$this->placeholder('content_title')->set("Afmelden produktie order");
+?>
+
+<div>
+	<table class="simple">
+		<tr><td><b>Naam product</b></td><td> : </td><td> <?= $this->omschrijving; ?></td></tr>
+		<tr><td><b>Gepland</b></td><td> : </td><td> <?= $this->num_geproduceerd; ?> (uit prodplan)</td></tr>
+		<tr><td><b>Gereedgemeld</b></td><td> : </td><td> <?= $this->num_gereedgemeld; ?> (in prodplt)</td></tr>
+		<tr><td><b>Afgemeld</b></td><td> : </td><td> <?= $this->num_afgemeld; ?> (in tool)</td></tr>
+	</table>	
+</div>
+<div>
+	<?= $this->form; ?>
+</div>
+
+

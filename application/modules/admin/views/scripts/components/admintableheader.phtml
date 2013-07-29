@@ -1,0 +1,42 @@
+<thead>
+	<tr>
+		<th class="checkbox"><input type="checkbox" id="checkall" onclick="checkall()" /></th>		
+		<?  $num_cols = 0;
+			foreach($this->cols as $name=>$value)
+			{
+				$num_cols++;
+		   		echo '<th scope="col">';
+		   		
+				if (isset($this->sorts[$name]))
+				{ 
+					echo $name;
+					
+					if (($this->curorder != $this->sorts[$name]) || ($this->cursort != 'asc')){ 
+						echo '<a title="sorteer alfabetich" href="';
+						echo $this->url( array('controller'=>$this->controller,
+											  'action'=>'index',
+											  'order'=>$this->sorts[$name],
+											  'sort'=>'asc'));
+						echo '" class="asc">&nbsp;</a>';
+					}
+					if (($this->curorder != $this->sorts[$name]) || ($this->cursort != 'desc')){ 
+						echo '<a title="sorteer alfabetich omgekeerd" href="';
+						echo $this->url( array('controller'=>$this->controller,
+											  'action'=>'index',
+											  'order'=>$this->sorts[$name],
+											  'sort'=>'desc'));
+						echo '" class="desc">&nbsp;</a>';
+					}					
+				}
+				else
+					echo $name;
+				
+				echo '</th>';
+			}
+		?>		
+		<? if (count($this->associations) > 0): ?>
+			<th scope="col">Toon</th>
+		<? endif; ?>
+		<th scope="col">Akties</th>
+	</tr>
+</thead>
